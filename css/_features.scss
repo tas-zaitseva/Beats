@@ -1,0 +1,22 @@
+.features {
+  display: flex;
+  align-items: center;
+  column-gap: 11px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  max-width: 166px;
+}
+
+.feature__icon {
+  width: 41px;
+  height: 41px;
+}
+
+.feature__text {
+  font-size: 16px;
+  line-height: 1;
+}

@@ -1,0 +1,18 @@
+.contacts__phone {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-size: 18px;
+}
+
+.contacts__phone:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  background: url(../images/phone.png) center center no-repeat;
+  background-size: cover;
+  margin-right: 6px;
+  
+}
