@@ -1,6 +1,9 @@
 .sidebar {
+  width: 80px;
   position: fixed;
-  transform: translate($container-width);
+  top: 0;
+  left: 50%;
+  transform: translate($container-width/2);
   height: 100%;
   padding-top: 243px;
   padding-left: 19px;
@@ -31,8 +34,8 @@
   }
   
   &__menu-link {
-    width: $sidebar-point-size;
-    height: $sidebar-point-size;
+    width: 6px;
+    height: 6px;
     background: #000;
     opacity: .6;
     border-radius: 50%;
@@ -46,10 +49,10 @@
       width: $sidebar-border-size;
       height: $sidebar-border-size;
       border: 1px solid transparent;
-      border-radius: 100%;
-      top: 0;
-      left: 0;
-      transform: translate(-(0.5*$sidebar-border-size - 0.5*$sidebar-point-size + 1px), -(0.5*$sidebar-border-size - 0.5*$sidebar-point-size + 1px));
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       transition: .2s;
     }
 

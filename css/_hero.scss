@@ -17,6 +17,7 @@
 
   &__content {
     display: flex;
+    flex-direction: column;
   }
 
   &__main-content {
@@ -35,10 +36,6 @@
       top: 24px;
       right: 19px;
     }
-  }
-
-  &__main-section {
-    flex:1;
   }
   
   &__sidebar {
