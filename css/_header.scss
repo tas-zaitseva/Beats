@@ -2,21 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &__col {
+    display: flex;
+    align-items: center;
+
+    &--align-right {
+      justify-content: flex-end;
+      margin-right: 25px;
+    }
+  }
+    
+  &__logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 38px;
+    flex-shrink: 0;
+  }
 }
 
-.header__col {
-  display: flex;
-  align-items: center;
-}
-
-.header__col--align-right {
-  justify-content: flex-end;
-  margin-right: 25px;
-}
-
-.header__logo {
-  width: 40px;
-  height: 40px;
-  margin-right: 38px;
-  flex-shrink: 0;
-}

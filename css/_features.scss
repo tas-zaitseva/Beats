@@ -9,14 +9,15 @@
   align-items: center;
   column-gap: 16px;
   max-width: 166px;
+
+  &__icon {
+    width: 41px;
+    height: 41px;
+  }
+  
+  &__text {
+    font-size: 16px;
+    line-height: 1;
+  }
 }
 
-.feature__icon {
-  width: 41px;
-  height: 41px;
-}
-
-.feature__text {
-  font-size: 16px;
-  line-height: 1;
-}

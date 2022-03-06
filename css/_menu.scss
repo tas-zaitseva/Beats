@@ -1,15 +1,16 @@
 .menu {
   display: flex;
   align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 27.5px;
+  }
+  
+  &__link {
+    font-family: 'Alegreya Sans', helvetica, sans-serif;
+    font-size: 18px;
+  }
 }
 
-.menu__list {
-  display: flex;
-  align-items: center;
-  column-gap: 27.5px;
-}
-
-.menu__link {
-  font-family: 'Alegreya Sans', helvetica, sans-serif;
-  font-size: 18px;
-}
