@@ -20,6 +20,7 @@ $icon-container-width: 128px;
 @import "normalize/normalize.css";
 
 @import "css/layout";
+@import "css/section";
 @import "css/hero";
 @import "css/sidebar";
 @import "css/header";
@@ -29,7 +30,7 @@ $icon-container-width: 128px;
 @import "css/features";
 @import "css/reasons";
 @import "css/feedback";
-@import "css/pager";
+@import "css/switcher";
 @import "css/delivery";
 @import "css/form";
 @import "css/controls";

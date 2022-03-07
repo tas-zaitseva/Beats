@@ -1,7 +1,16 @@
 .hero {
-  background: #F5F5F5;
+  background: $lightest-gray;
   padding-bottom: 63px;
-  position: relative;
+  height: 100vh;
+  min-height: 652px;
+  
+  &__container {
+    background: url(images/headline-pic.png) right 15px center / 53% auto no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
 
   &:after {
     display: block;
@@ -15,28 +24,6 @@
     transform: translateX(0.462*$container-width) rotate(-45deg) translateX(-11px);
   }
 
-  &__main-content {
-    position: relative;
-    padding-top: 71px;
-  
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 0.52*$container-width;
-      height: 0.52*$container-width;
-      background: url(images/headline-pic.png) center center no-repeat;
-      border-radius: 100%;
-      background-size: cover;
-      top: 24px;
-      right: 19px;
-    }
-  }
-  
-  &__sidebar {
-    width: 80px;
-  }
-  
   &__header {
     height: 90px;
   }
