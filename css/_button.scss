@@ -1,14 +1,27 @@
 .button {
-  padding: 17px 41px;
+  padding: 19px 41px;
   font-size: 16px;
   font-weight: 700;
   background-color: $red;
-  color: $textcolor-light;
+  color: $white;
   text-transform: uppercase;
   border-radius: 100px;
   transition: background-color .2s;
 
   &:hover {
     background-color: $dark-red;
+  }
+
+  &--reset {
+    background-color: transparent;
+    text-transform: none;
+    font-size: 18px;
+    font-weight: 400;
+    transition: color .2s;
+
+    &:hover {
+      color: $red;
+      background-color: transparent;
+    }
   }
 }

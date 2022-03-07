@@ -1,4 +1,25 @@
-@import "css/base";
+//colors
+$black: #292929;
+$white: #fff;
+$red: #E01F3D;
+$dark-red: #CA1B36;
+$gray: #868686;
+$dark-gray: #666666;
+$light-gray: #c4c4c4;
+$lightest-gray: #F2F5F4;
+
+//sizes
+$container-width: 940px;
+$base-fontsize: 18px;
+
+$sidebar-border-size: 14px;
+$icon-container-width: 128px;
+
+
+@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Play:wght@400;700&display=swap);
+@import "normalize/normalize.css";
+
+@import "css/layout";
 @import "css/hero";
 @import "css/sidebar";
 @import "css/header";
@@ -7,3 +28,8 @@
 @import "css/button";
 @import "css/features";
 @import "css/reasons";
+@import "css/feedback";
+@import "css/pager";
+@import "css/delivery";
+@import "css/form";
+@import "css/controls";

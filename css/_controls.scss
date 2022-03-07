@@ -1,0 +1,76 @@
+.controls {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+
+  &__visible-elem {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background: $white;
+    margin-right: 10px;
+
+    &--radio {
+      border-radius: 50%;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: $red;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+
+      }
+    }
+
+    &--checkbox {
+      border-radius: 4px;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 8px;
+        background: url(../images/checkmark.png) center center no-repeat;
+        background-size: contain;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked + &__visible-elem{
+    .controls__button {
+      &--radio {
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &--checkbox {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+}

@@ -4,6 +4,9 @@ $reason-width: 0.29*$container-width;
   position: relative;
   padding-top: 105px;
   padding-bottom: 89px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__headline {
     display: flex;

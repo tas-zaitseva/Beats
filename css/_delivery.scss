@@ -1,0 +1,12 @@
+.delivery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 88px;
+  background: $black;
+
+  &__headline {
+    margin-bottom: 61px;
+  }
+}

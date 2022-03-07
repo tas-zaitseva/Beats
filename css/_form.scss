@@ -1,0 +1,62 @@
+.form {
+display: flex;
+justify-content: space-between;
+
+  &__column {
+    width: 48.5%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    column-gap: 13px;
+
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    font-size: 16px;
+    line-height: 19px;
+    flex: 1;
+  }
+
+  &__title {
+    margin-bottom: 6px;
+  }
+
+  &__input {
+    background: $white;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    padding: 14px 12px;
+    font-family: 'open sans', helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:focus {
+      border: 3px solid $red;
+    }
+
+    &--comment {
+      min-height: 152px;
+    }
+  }
+
+  &__comment {
+    margin-bottom: 23px;
+  }
+
+  &__call-back {
+    margin-bottom: 37px;
+  }
+
+  &__controls {
+    width: 100%;
+  }
+
+}
