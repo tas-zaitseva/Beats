@@ -142,6 +142,7 @@ textarea {
   padding-bottom: 63px;
   height: 100vh;
   min-height: 652px;
+  position: relative;
 }
 .hero__container {
   background: url(images/headline-pic.png) right 15px center/53% auto no-repeat;
@@ -160,14 +161,14 @@ textarea {
 .hero:after {
   display: block;
   position: absolute;
-  bottom: 4px;
+  bottom: -4px;
   right: 50%;
   content: "";
   width: 47px;
   height: 11px;
   background: #c4c4c4;
-  -webkit-transform: translateX(434.28px) rotate(-45deg) translateX(-11px);
-          transform: translateX(434.28px) rotate(-45deg) translateX(-11px);
+  -webkit-transform: translateX(423px) rotate(-45deg);
+          transform: translateX(423px) rotate(-45deg);
 }
 .hero__header {
   height: 90px;
@@ -433,14 +434,14 @@ textarea {
 .reasons:after {
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -21px;
   left: 50%;
   content: "";
   border: 17px solid transparent;
   border-top: 0;
   border-bottom: 37px solid #E01F3D;
-  -webkit-transform: translateX(-494.44px) translateY(20px) rotate(-135deg);
-          transform: translateX(-494.44px) translateY(20px) rotate(-135deg);
+  -webkit-transform: translateX(-494.44px) rotate(-135deg);
+          transform: translateX(-494.44px) rotate(-135deg);
 }
 .reasons__item {
   padding: 0 3%;

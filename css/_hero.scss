@@ -3,6 +3,7 @@
   padding-bottom: 63px;
   height: 100vh;
   min-height: 652px;
+  position: relative;
   
   &__container {
     background: url(images/headline-pic.png) right 15px center / 53% auto no-repeat;
@@ -15,13 +16,13 @@
   &:after {
     display: block;
     position: absolute;
-    bottom: 4px;
+    bottom: -4px;
     right: 50%;
     content: "";
     width: 47px;
     height: 11px;
     background: $light-gray;
-    transform: translateX(0.462*$container-width) rotate(-45deg) translateX(-11px);
+    transform: translateX(0.45*$container-width) rotate(-45deg);
   }
 
   &__header {

@@ -33,13 +33,13 @@ $reason-width: 0.29*$container-width;
   &:after {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -21px;
     left: 50%;
     content: "";
     border: 17px solid transparent;
     border-top: 0;
     border-bottom: 37px solid $red;
-    transform: translateX(-0.526*$container-width) translateY(20px) rotate(-135deg);
+    transform: translateX(-0.526*$container-width) rotate(-135deg);
   }
 
   &__item {
