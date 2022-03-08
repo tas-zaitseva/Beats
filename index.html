@@ -131,14 +131,14 @@
               </article>
             </div>
             <ul class="feedback__switcher switcher">
-              <li class="switcher__item switcher__item--active interactive-avatar">
-                <a href="" class="interactive-avatar__link"><img src="images/User_avatar1.png" alt="User avatar" class="interactive-avatar__pic"></a>
+              <li class="switcher__item interactive-avatar interactive-avatar--active">
+                <a href="#" class="interactive-avatar__link"><img src="images/User_avatar1.png" alt="User avatar" class="interactive-avatar__pic"></a>
               </li>
-              <li class="switcher__item">
-                <a href="" class="interactive-avatar__link"><img src="images/User_avatar2.png" alt="User avatar" class="interactive-avatar__pic"></a>
+              <li class="switcher__item interactive-avatar">
+                <a href="#" class="interactive-avatar__link"><img src="images/User_avatar2.png" alt="User avatar" class="interactive-avatar__pic"></a>
               </li>
-              <li class="switcher__item">
-                <a href="" class="interactive-avatar__link"><img src="images/User_avatar3.png" alt="User avatar" class="interactive-avatar__pic"></a>
+              <li class="switcher__item interactive-avatar">
+                <a href="#" class="interactive-avatar__link"><img src="images/User_avatar3.png" alt="User avatar" class="interactive-avatar__pic"></a>
               </li>
             </ul>
           </div>
@@ -153,35 +153,35 @@
         <form action="" class="delivery__form form">
           <div class="form__column">
             <div class="form__row">
-              <label class="form__label">
+              <label class="form__block">
                 <div class="form__title">Имя</div>
                 <input type="text" name="name" class="form__input" required>
               </label>
-              <label class="form__label">
+              <label class="form__block">
                 <div class="form__title">Телефон</div>
                 <input type="tel" name="phone" class="form__input" required>
               </label>
             </div>
             <div class="form__row">
-              <label class="form__label">
+              <label class="form__block">
                 <div class="form__title">Улица</div>
                 <input type="text" name="street" class="form__input" required>
               </label>
             </div>
             <div class="form__row">
-              <label class="form__label">
+              <label class="form__block">
                 <div class="form__title">Дом</div>
                 <input type="text" name="building" class="form__input" required>
               </label>
-              <label class="form__label">
+              <label class="form__block">
                 <div class="form__title">Корпус</div>
                 <input type="text" name="building-block" class="form__input">
               </label>
-              <label class="form__label">
+              <label class="form__block">
                 <div class="form__title">Квартира</div>
                 <input type="text" name="apartment" class="form__input">
               </label>
-              <label class="form__label">
+              <label class="form__block">
                 <div class="form__title">Этаж</div>
                 <input type="text" name="floor" class="form__input">
               </label>
@@ -189,7 +189,7 @@
           </div>
           <div class="form__column">
             <div class="form__row form__comment">
-              <label class="form__label">
+              <label class="form__block">
                 <div class="form__title">Комментарий</div>
                 <textarea name="comment" class="form__input form__input--comment"></textarea>
               </label>
@@ -197,20 +197,20 @@
             <div class="form__row">
               <ul class="form__controls controls">
                 <li class="controls__item">
-                  <label class="controls__element form__label">
+                  <label class="controls__element form__block">
                     <input class="controls__input" type="radio" name="payment" value="cash">
                     <div class="controls__visible-elem">
-                      <div class="controls__button controls__button--radio"></div>
-                      <div class="controls__text">Потребуется сдача</div>
+                      <div class="controls__button radio-button"></div>
+                      <div class="controls__title">Потребуется сдача</div>
                     </div>
                   </label>
                 </li>
                 <li class="controls__item">
-                  <label class="controls__element form__label">
+                  <label class="controls__element form__block">
                     <input class="controls__input" type="radio" name="payment" value="card" checked>
                     <div class="controls__visible-elem">
-                      <div class="controls__button controls__button--radio"></div>
-                      <div class="controls__text">Оплата картой</div>
+                      <div class="controls__button radio-button"></div>
+                      <div class="controls__title">Оплата картой</div>
                     </div>
                   </label>
                 </li>
@@ -219,11 +219,11 @@
             <div class="form__row form__call-back">
               <ul class="form__controls controls">
                 <li class="controls__item">
-                  <label class="controls__element form__label">
+                  <label class="controls__element form__block">
                     <input class="controls__input" type="checkbox" name="call-back" value="non-call">
                     <div class="controls__visible-elem">
-                      <div class="controls__button controls__button--checkbox"></div>
-                      <div class="controls__text">Не перезванивать</div>
+                      <div class="controls__button checkbox"></div>
+                      <div class="controls__title">Не перезванивать</div>
                     </div>
                   </label>
                 </li>
@@ -231,24 +231,24 @@
             </div>
             <div class="form__row form__buttons">
               <button type="submit" class="form__button button">Заказать</button>
-              <button type="reset" class="form__button button button--reset">Очистить</button>
+              <button type="reset" class="form__button button button--theme-transparent">Очистить</button>
             </div>
           </div>
         </form>
       </div>
     </section>
     <aside class="sidebar">
-        <ul class="sidebar__menu">
-          <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link sidebar__menu-link--active"></a></li>
-          <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
-          <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
-          <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
-          <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
-          <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
-          <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
-          <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
-          <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
-        </ul>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link sidebar__menu-link--active"></a></li>
+        <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
+        <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
+        <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
+        <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
+        <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
+        <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
+        <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
+        <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"></a></li>
+      </ul>
     </aside>
   </div>
   

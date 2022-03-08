@@ -5,38 +5,8 @@
   column-gap: 6px;
 
   &__item {
-    position: relative;
     width: 74px;
     height: 74px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-
-    &--active {
-      outline: 4px solid $red;
-      outline-offset: -4px;
-    }
-  
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 74px;
-      height: 74px;
-      top: 0;
-      left: 0;
-      border-radius: 50%;
-      outline: 4px solid $red;
-      outline-offset: -4px;
-      opacity: 0;
-      transition: opacity .6; //Почему не работает transition в отношении opacity?
-    }
-
-    &:hover {
-      &:after {
-        opacity: 1;
-      }
-    }  
-    
+    cursor: pointer;
   }
 }

@@ -1,12 +1,8 @@
 .sidebar {
-  width: 80px;
   position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translate($container-width/2);
-  height: 100%;
-  padding-top: 243px;
-  padding-left: 19px;
+  top: 37%;
+  right: 3%;
+  z-index: $z-sidebar;
 
   &__menu {
     display: flex;
@@ -18,53 +14,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: $sidebar-border-size + 2px;
-    height: $sidebar-border-size + 2px;
-
-    &:hover {
-      .sidebar__menu-link {
-        background: $red;
-        opacity: 1;
-    
-        &::after {
-          border: 1px solid $red;
-        }
-      }
-    }
   }
   
   &__menu-link {
-    width: 6px;
-    height: 6px;
-    background: #000;
-    opacity: .6;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
+    border: 1px solid transparent;
     position: relative;
-    transition: .2s;
   
     &::after {
+      content: "";
       display: block;
       position: absolute;
-      content: "";
-      width: $sidebar-border-size;
-      height: $sidebar-border-size;
-      border: 1px solid transparent;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
+      background: $black;
+      opacity: .6;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      transition: .2s;
     }
 
     &--active {
-      background: $red;
-      opacity: 1;
-    
+      border-color: $red;
+
       &::after {
-        border: 1px solid $red;
+        background: $red;
+        opacity: 1;
       }
     }
-
   }
 }
 

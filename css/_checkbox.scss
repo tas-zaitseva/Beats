@@ -1,0 +1,17 @@
+.checkbox {
+  border-radius: 4px;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    background: url(images/checkmark.png) center center no-repeat;
+    background-size: contain;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+}

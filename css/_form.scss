@@ -1,62 +1,59 @@
 .form {
 display: flex;
-justify-content: space-between;
+column-gap: 26px;
 
   &__column {
-    width: 48.5%;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    row-gap: 14px;
+    row-gap: 11px;
   }
 
   &__row {
     display: flex;
     align-items: center;
     column-gap: 13px;
-
   }
 
-  &__label {
+  &__block {
     display: flex;
     flex-direction: column;
-    color: $white;
-    font-size: 16px;
-    line-height: 19px;
+    row-gap: 5px;
     flex: 1;
+    user-select: none;
   }
 
   &__title {
-    margin-bottom: 6px;
+    color: $white;
+    font-size: 16px;
   }
 
   &__input {
     background: $white;
     border: 3px solid transparent;
     border-radius: 6px;
-    padding: 14px 12px;
+    padding: 16px 12px;
     font-family: 'open sans', helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
+    width: 100%;
 
     &:focus {
-      border: 3px solid $red;
+      border-color: $red;
+      outline: none;
     }
 
     &--comment {
-      min-height: 152px;
+      min-height: 154px;
+      margin-bottom: 27px;
     }
   }
 
-  &__comment {
-    margin-bottom: 23px;
-  }
-
   &__call-back {
-    margin-bottom: 37px;
+    margin-bottom: 45px;
   }
 
   &__controls {
     width: 100%;
   }
-
 }

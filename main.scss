@@ -12,10 +12,12 @@ $lightest-gray: #F2F5F4;
 $container-width: 940px;
 $base-fontsize: 18px;
 
-$sidebar-border-size: 14px;
 $icon-container-width: 128px;
 
+//z-indexes
+$z-sidebar: 100;
 
+//importing files
 @import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Play:wght@400;700&display=swap);
 @import "normalize/normalize.css";
 
@@ -34,3 +36,6 @@ $icon-container-width: 128px;
 @import "css/delivery";
 @import "css/form";
 @import "css/controls";
+@import "css/interactive-avatar";
+@import "css/radio-button";
+@import "css/checkbox";

@@ -17,7 +17,7 @@
     height: 35px;
     border-radius: 50%;
     background: $gray;
-    transform: translateX(-0.526*$container-width) translateY(20px);
+    transform: translateX(-0.5*$container-width) translateY(20px);
   }
 }
 
@@ -31,10 +31,12 @@
   display: flex;
   align-items: flex-start;
   column-gap: 40px;
-  min-height: 348px;
+    min-height: 348px;
   background: $lightest-gray;
   padding: 42px;
   padding-right: 107px;
+  overflow: hidden;
+  position: relative;
   
   &__avatar {
     width: 253px;
@@ -46,6 +48,7 @@
     display: flex;
     flex-direction: column;
     padding-top: 36px;
+    flex: 1;
   }
 
   &__title {
@@ -66,5 +69,18 @@
   &__author {
     font-size: 18px;
     font-weight: 700;
+  }
+
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    background: $white;
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -70%);
   }
 }
