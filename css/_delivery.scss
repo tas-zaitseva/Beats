@@ -4,7 +4,9 @@
   align-items: center;
   padding-top: 70px;
   padding-bottom: 88px;
-  background: $black;
+  background: url(images/bg-dark.png) bottom center no-repeat;
+  background-size: contain;
+  background-color: $bg-black;
 
   &__headline {
     margin-bottom: 56px;

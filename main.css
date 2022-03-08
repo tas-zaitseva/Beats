@@ -655,7 +655,9 @@ textarea {
           align-items: center;
   padding-top: 70px;
   padding-bottom: 88px;
-  background: #292929;
+  background: url(images/bg-dark.png) bottom center no-repeat;
+  background-size: contain;
+  background-color: #181818;
 }
 .delivery__headline {
   margin-bottom: 56px;
