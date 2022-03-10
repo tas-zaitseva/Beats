@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Play:wght@400;700&display=swap);
-@import "normalize/normalize.css";
+@import "../normalize/normalize.css";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -145,7 +145,7 @@ textarea {
   position: relative;
 }
 .hero__container {
-  background: url(images/headline-pic.png) right 15px center/53% auto no-repeat;
+  background: url(../images/headline-pic.png) right 15px center/53% auto no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,6 +354,7 @@ textarea {
   text-transform: none;
   font-size: 16px;
   font-weight: 400;
+  padding: 19px 6px;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
@@ -397,8 +398,6 @@ textarea {
 
 .reasons {
   position: relative;
-  padding-top: 63px;
-  padding-bottom: 63px;
 }
 .reasons__headline {
   display: -webkit-box;
@@ -451,7 +450,7 @@ textarea {
   position: relative;
 }
 .reasons__item:after {
-  content: url(images/reason-separator.png);
+  content: url(../images/reason-separator.png);
   display: block;
   position: absolute;
   top: 64px;
@@ -532,8 +531,6 @@ textarea {
 }
 
 .feedback-section {
-  padding-top: 63px;
-  padding-bottom: 63px;
   position: relative;
 }
 .feedback-section__headline {
@@ -654,9 +651,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 70px;
-  padding-bottom: 88px;
-  background: url(images/bg-dark.png) bottom center no-repeat;
+  background: url(../images/bg-dark.png) bottom center no-repeat;
   background-size: contain;
   background-color: #181818;
 }
@@ -832,7 +827,7 @@ textarea {
   position: absolute;
   width: 10px;
   height: 8px;
-  background: url(images/checkmark.png) center center no-repeat;
+  background: url(../images/checkmark.png) center center no-repeat;
   background-size: contain;
   left: 50%;
   top: 50%;

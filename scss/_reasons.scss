@@ -2,8 +2,6 @@ $reason-width: 0.29*$container-width;
 
 .reasons {
   position: relative;
-  padding-top: 63px;
-  padding-bottom: 63px;
 
   &__headline {
     display: flex;
@@ -48,7 +46,7 @@ $reason-width: 0.29*$container-width;
     position: relative;
 
     &:after {
-      content: url(images/reason-separator.png);
+      content: url(../images/reason-separator.png);
       display: block;
       position: absolute;
       top: 0.5*$icon-container-width;
