@@ -1,32 +1,36 @@
 .hero {
   background: $lightest-gray;
-  padding-bottom: 63px;
-  height: 100vh;
-  min-height: 652px;
+  padding-bottom: rem(63px);
   position: relative;
   
   &__container {
-    background: url(../images/headline-pic.png) right 15px center / 53% auto no-repeat;
+    background: url(../images/headline-pic.png) right rem(15px) center / 53% auto no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+
+    @include tablets {
+      background: none;
+    }
   }
 
   &:after {
     display: block;
     position: absolute;
     bottom: -4px;
-    right: 50%;
+    right: 26%;
     content: "";
     width: 47px;
     height: 11px;
     background: $light-gray;
-    transform: translateX(0.45*$container-width) rotate(-45deg);
+    transform: rotate(-45deg);
   }
 
   &__header {
-    height: 90px;
+    width: 100%;
+    height: rem(90px);
+    flex-shrink: 0;
   }
     
   &__text-section {
@@ -34,21 +38,70 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 64px;
+    margin-bottom: rem(64px);
+
+    @include tablets {
+      width: 100%;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 0;
+
+      &:before {
+        display: block;
+        content: "";
+        width: rem(345px);
+        height: rem(345px);
+        background: url(../images/headline-pic.png) center center no-repeat;
+        background-size: cover;
+      }
+    }
+
+    @include phones {
+      &:before {
+        width: 67vw;
+        height: 67vw;
+      }
+    }
   }
   
   &__title {
-    margin-bottom: 22px;
+    margin-bottom: rem(22px);
     line-height: 1.08;
+
+    @include tablets {
+      margin-top: rem(64px);
+      margin-bottom: rem(15px);
+      width: 88%;
+    }
+
+    @include phones {
+      margin-top: rem(56px);
+      margin-bottom: rem(16px);
+      width: rem(336px);
+    }
   }
-  
+
   &__subtitle {
     width: 83%;
     font-family: 'Alegreya Sans', helvetica, sans-serif;
-    font-size: 21px;
+    font-size: rem(21px);
     font-weight: 400;
     line-height: 1.15;
-    margin-bottom: 36px;
+    margin-bottom: rem(36px);
+
+    @include tablets {
+      width: 53%;
+      margin-bottom: rem(23px);
+      font-size: rem(19.2px);
+    }
+  
+    @include phones {
+      width: 68%;
+      margin-bottom: rem(29px);
+      font-size: rem(22px);
+    }
   }
 }
 

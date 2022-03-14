@@ -1,9 +1,24 @@
 .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: rem(3px);
+
+  @include phones {
+    align-items: center;
+    row-gap: rem(20px);
+  }
 
   &__phone {
+  font-size: rem(18px);
   display: flex;
   align-items: center;
-  column-gap: 6px;
+  column-gap: rem(6px);
+  transition: color .3s;
+
+    &:hover {
+      color: $red;
+    }
   }
   
   &__icon {
@@ -11,5 +26,18 @@
     height: 14px;
     display: flex;
     align-items: center;
+
+    @include phones {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__description {
+    font-size: rem(18px);
+
+    @include tablets {
+      font-size: rem(21px);
+    }
   }
 }

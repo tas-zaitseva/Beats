@@ -1,0 +1,28 @@
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include phones {
+      flex-direction: column;
+      justify-content: center;
+      row-gap: rem(22px);
+    }
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+  }
+
+  &__col--align-right {
+    justify-content: flex-end;
+  }
+}

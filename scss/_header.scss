@@ -9,15 +9,31 @@
 
     &--align-right {
       justify-content: flex-end;
-      margin-right: 25px;
+      flex-shrink: 0;
+      margin-right: rem(25px);
+
+      @include tablets {
+        margin-right: 0;
+      }
     }
   }
     
   &__logo {
     width: 40px;
     height: 40px;
-    margin-right: 38px;
+    margin-right: rem(38px);
     flex-shrink: 0;
+  }
+
+  &__contacts {
+    margin-left: 15px;
+  }
+
+  &__contacts.contacts{
+
+    @include tablets {
+      display: none;
+    }
   }
 }
 

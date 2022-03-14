@@ -1,22 +1,26 @@
 .features {
   display: flex;
   align-items: center;
-  column-gap: 11px;
+  column-gap: rem(11px);
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .feature {
   display: flex;
   align-items: center;
-  column-gap: 16px;
-  max-width: 166px;
+  column-gap: rem(16px);
+  max-width: rem(166px);
 
   &__icon {
-    width: 41px;
-    height: 41px;
+    width: rem(41px);
+    height: rem(41px);
   }
   
   &__text {
-    font-size: 16px;
+    font-size: rem(16px);
     line-height: 1;
   }
 }

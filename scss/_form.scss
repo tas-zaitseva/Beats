@@ -1,24 +1,41 @@
 .form {
 display: flex;
-column-gap: 26px;
+column-gap: rem(26px);
+
+@include tablets {
+  flex-direction: column;
+  row-gap: rem(17px);
+}
 
   &__column {
     flex: 1;
     display: flex;
     flex-direction: column;
-    row-gap: 11px;
+    row-gap: rem(8px);
+
+    @include tablets {
+      row-gap: rem(12px);
+    }
+
+    @include phones {
+      row-gap: rem(20px);
+    }
   }
 
   &__row {
     display: flex;
     align-items: center;
-    column-gap: 13px;
+    column-gap: rem(13px);
+
+    @include tablets {
+      column-gap: rem(18px);
+    }
   }
 
   &__block {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
+    row-gap: rem(5px);
     flex: 1;
     user-select: none;
   }
@@ -30,30 +47,60 @@ column-gap: 26px;
 
   &__input {
     background: $white;
-    border: 3px solid transparent;
-    border-radius: 6px;
-    padding: 16px 12px;
+    border-radius: 4px;
+    border: none;
+    outline: 3px solid transparent;
+    padding: rem(19px) rem(12px);
     font-family: 'open sans', helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: rem(14px);
+    line-height: rem(20px);
     width: 100%;
 
+    @include tablets {
+      padding: rem(9px) rem(10px);
+    }
+
     &:focus {
-      border-color: $red;
-      outline: none;
+      outline-color: $red;
     }
 
     &--comment {
-      min-height: 154px;
-      margin-bottom: 27px;
+      min-height: rem(154px);
+      margin-bottom: rem(27px);
+
+      @include tablets {
+        min-height: rem(90px);
+        margin-bottom: rem(9.8px);
+      }
+
+      @include phones {
+        min-height: rem(93px);
+        margin-bottom: rem(9.8px);
+      }
     }
   }
 
   &__call-back {
-    margin-bottom: 45px;
+    margin-bottom: rem(45px);
+
+    @include tablets {
+      margin-top: rem(20px);
+      margin-bottom: rem(30px);
+    }
+
+    @include phones {
+      margin-top: rem(10px);
+      margin-bottom: rem(24px);
+    }
   }
 
   &__controls {
     width: 100%;
+  }
+
+  &__buttons {
+    @include tablets {
+      justify-content: center;
+    }
   }
 }

@@ -1,0 +1,20 @@
+.contacts-section {
+  position: relative;
+
+  &__map {
+    height: 100%;
+  }
+
+  &__footer {
+    height: rem(90px);
+    background: $white;
+    margin-top: auto;
+    flex-shrink: 0;
+
+    @include phones {
+      height: rem(172px);
+    }
+  }
+
+
+}

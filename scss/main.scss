@@ -1,6 +1,6 @@
 //colors
 $black: #292929;
-$bg-black: #181818;
+$bg-black: #161616;
 $white: #fff;
 $red: #E01F3D;
 $dark-red: #CA1B36;
@@ -9,17 +9,27 @@ $dark-gray: #666666;
 $light-gray: #c4c4c4;
 $lightest-gray: #F2F5F4;
 
-//sizes
-$container-width: 940px;
-$base-fontsize: 18px;
+//rem units
+// $DesktopFontSize: 16px;
+$baseFontSize: 16px;
+// $tabletsFontSize: 15px;
+// $phonesFontSize: 14px;
 
+
+//sizes
+$container-max-width: 940px;
 $icon-container-width: 128px;
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
 
 //z-indexes
 $z-sidebar: 100;
 
 //importing files
 @import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Play:wght@400;700&display=swap);
+@import "media";
 @import "../normalize/normalize.css";
 
 @import "layout";
@@ -40,3 +50,7 @@ $z-sidebar: 100;
 @import "interactive-avatar";
 @import "radio-button";
 @import "checkbox";
+@import "contacts-section";
+@import "footer";
+@import "socials";
+@import "hamburger-menu";

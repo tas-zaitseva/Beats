@@ -7,7 +7,7 @@
   &__menu {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
+    row-gap: rem(5px);
   }
   
   &__menu-item {
@@ -17,8 +17,8 @@
   }
   
   &__menu-link {
-    width: 14px;
-    height: 14px;
+    width: rem(16px);
+    height: rem(16px);
     border-radius: 50%;
     border: 1px solid transparent;
     position: relative;
@@ -27,8 +27,8 @@
       content: "";
       display: block;
       position: absolute;
-      width: 6px;
-      height: 6px;
+      width: rem(6px);
+      height: rem(6px);
       border-radius: 50%;
       background: $black;
       opacity: .6;
@@ -45,6 +45,10 @@
         opacity: 1;
       }
     }
+  }
+
+  @include tablets {
+    display: none;
   }
 }
 

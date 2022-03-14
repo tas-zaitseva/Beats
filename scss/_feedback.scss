@@ -2,70 +2,129 @@
   position: relative;
 
   &__headline {
-    margin-bottom: 32px;
+    margin-bottom: rem(32px);
+
+    @include tablets {
+      margin-bottom: rem(38px);
+    }
   }
 
   &:after {
     display: block;
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 23%;
     content: "";
-    width: 35px;
-    height: 35px;
+    width: rem(35px);
+    height: rem(35px);
     border-radius: 50%;
     background: $gray;
-    transform: translateX(-0.5*$container-width) translateY(20px);
+    transform: translateY(50%);
   }
 }
 
 .feedback {
   &__element {
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
+
+    @include tablets {
+      margin-bottom: rem(30px);
+    }
+
+    @include phones {
+      margin-bottom: rem(50px);
+    }
   }
 }
 
 .single-feedback {
   display: flex;
   align-items: flex-start;
-  column-gap: 40px;
-    min-height: 348px;
+  column-gap: rem(40px);
+  min-height: rem(348px);
   background: $lightest-gray;
-  padding: 42px;
-  padding-right: 107px;
+  padding: rem(42px);
+  padding-right: rem(107px);
   overflow: hidden;
   position: relative;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    padding: rem(56px) rem(23px) rem(46px);
+  }
+
+  @include phones {
+    padding: rem(64px) rem(23px) rem(46px);
+  }
   
   &__avatar {
-    width: 253px;
-    height: 264px;
+    width: rem(253px);
+    height: rem(264px);
     flex-shrink: 0;
+
+    @include tablets {
+      width: rem(138px);
+      height: rem(138px);
+    } 
+
+    @include tablets {
+      width: rem(148px);
+      height: rem(148px);
+    } 
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    padding-top: 36px;
+    padding-top: rem(36px);
     flex: 1;
+
+    @include tablets {
+      align-items: center;
+    }
+
+    @include phones {
+      padding-top: rem(24px);
+    }
   }
 
   &__title {
-    margin-bottom: 27px;
+    margin-bottom: rem(27px);
+
+    @include phones {
+      font-size: rem(27px);
+      margin-bottom: rem(14px);
+    }
   }
 
   &__text {
     color: $dark-gray;
-    font-size: 16px;
-    line-height: 19px;
-    margin-bottom: 31px;
+    font-size: rem(16px);
+    line-height: rem(19px);
+    margin-bottom: rem(31px);
+
+    @include tablets {
+      text-align: center;
+    }
+
+    @include phones {
+      font-size: rem(18px);
+      line-height: 1.24;
+      margin-bottom: rem(14px);
+    }
 
     p {
-      margin-bottom: 10px;
+      margin-bottom: rem(10px);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
   &__author {
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 700;
   }
 
@@ -74,11 +133,15 @@
     content: "";
     position: absolute;
     background: $white;
-    width: 83px;
-    height: 83px;
+    width: rem(83px);
+    height: rem(83px);
     border-radius: 50%;
     top: 0;
     left: 50%;
     transform: translate(-50%, -70%);
+
+    @include phones {
+      display: none;
+    }
   }
 }

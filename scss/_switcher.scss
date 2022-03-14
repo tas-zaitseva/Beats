@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 6px;
+  column-gap: rem(6px);
 
   &__item {
-    width: 74px;
-    height: 74px;
+    width: rem(74px);
+    height: rem(74px);
     cursor: pointer;
   }
 }

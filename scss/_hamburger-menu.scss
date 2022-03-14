@@ -1,0 +1,40 @@
+.hamburger-menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 23px;
+
+  &__display {
+    position: relative;
+    width: 26px;
+    height: 4.5px;
+    background: $black;
+    border-radius: 4px;
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      background: inherit;
+      border-radius: inherit;
+      left: 0;
+    }
+
+    &:before {
+      bottom: 100%;
+      transform: translateY(-100%);
+    }  
+
+    &:after {
+      top: 100%;
+      transform: translateY(100%);
+    }
+  }
+
+  @include tablets {
+    display: flex;
+  }
+
+}

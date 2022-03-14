@@ -4,6 +4,21 @@
 
 body, html {
   height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: $baseFontSize;
+
+  @include tablets {
+    // $baseFontSize: $tabletsFontSize;
+    font-size: $baseFontSize - 1px;
+  }
+
+  @include phones {
+    // $baseFontSize: $phonesFontSize;
+    font-size: $baseFontSize - 2px;
+  }
 }
 
 body {
@@ -11,8 +26,7 @@ body {
   margin: 0;
   background: $white;
   color: $black;
-  font-size: $base-fontsize;
-  line-height: 22px;
+  line-height: rem(22px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,7 +36,6 @@ body {
   flex-direction: column;
   min-height: 100%;
   overflow: hidden;
-  min-width: $container-width + 20px;
 }
 
 p {
@@ -44,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h4 {
-  font-size: 24px;
+  font-size: rem(24px);
 }
 
 img {
@@ -55,7 +68,8 @@ img {
 
 .container {
   margin: 0 auto;
-  width: $container-width;
+  width: 95%;
+  max-width: $container-max-width;
   position: relative;
 }
 
