@@ -46,6 +46,10 @@
     border-bottom: 0;
     border-top: rem(37px) solid $red;
     transform: rotate(45deg);
+
+    @include tablets {
+      left: 10%;
+    }
   }
 
   &__item {
@@ -58,15 +62,15 @@
     }
 
     &:after {
-      content: url(../images/reason-separator.png);
+      content: "";
       display: block;
       position: absolute;
       top: 0.5*$icon-container-width;
       right: 0;
       transform: translateX(50%);
 
-      @include tablets {
-        display: none;
+      @media screen and (min-width: 768px) {
+        content: url(../images/reason-separator.png);
       }
     }
 

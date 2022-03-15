@@ -25,54 +25,68 @@
       height: 24px;
     }
 
-    
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      transition: .3s;
-    }
-    
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      opacity: 0;
-      transition: .3s;
-    }
-    
-    &:hover {
-      &:after {
-        opacity: 0;
-      }
-
-      &:before {
-        opacity: 1;
+    @media screen and (min-width: 768px) {
+      &:hover {
+        .socials__pic {
+          color: #000;
+        }
       }
     }
-  } 
-}
-
-@each $social in (vk, fb, in, tg) {
-  .socials__link--icon-#{$social}::after {
-    background: url(../images/social/#{$social}.png) center center no-repeat;
-    background-size: contain;
   }
-
-  .socials__link--icon-#{$social}::before {
-    background: url(../images/social/#{$social}-hover.png) center center no-repeat;
-    background-size: contain;
+  
+  &__pic {
+    color: #b3b3b3;
+    transition: color .3s;
   }
 }
+
+//старый код для иконок соцсетей на память
+
+    // &:after {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   width: 30px;
+    //   height: 30px;
+    //   border-radius: 50%;
+    //   transition: .3s;
+    // }
+    
+    // &:before {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   width: 30px;
+    //   height: 30px;
+    //   border-radius: 50%;
+    //   opacity: 0;
+    //   transition: .3s;
+    // }
+    
+    // &:hover {
+    //   &:after {
+    //     opacity: 0;
+    //   }
+
+    //   &:before {
+    //     opacity: 1;
+    //   }
+    // }
+
+// @each $social in (vk, fb, in, tg) {
+//   .socials__link--icon-#{$social}::after {
+//     background: url(../images/social/#{$social}.png) center center no-repeat;
+//     background-size: contain;
+//   }
+
+//   .socials__link--icon-#{$social}::before {
+//     background: url(../images/social/#{$social}-hover.png) center center no-repeat;
+//     background-size: contain;
+//   }
+// }

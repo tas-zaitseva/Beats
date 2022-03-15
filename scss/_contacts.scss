@@ -2,7 +2,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: rem(3px);
+  row-gap: rem(5px);
+
+  @include tablets {
+    row-gap: rem(8px);
+  }
 
   @include phones {
     align-items: center;
@@ -16,10 +20,19 @@
   column-gap: rem(6px);
   transition: color .3s;
 
+  @include tablets {
+    font-size: rem(19.2px);
+  }
+
+  @media screen and (min-width: 768px) {
     &:hover {
       color: $red;
+      .contacts__pic {
+        color: $red;
+      }
     }
   }
+}
   
   &__icon {
     width: 14px;
@@ -31,6 +44,13 @@
       width: 12px;
       height: 12px;
     }
+  }
+
+  &__pic {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    transition: color 0.3s;
   }
 
   &__description {

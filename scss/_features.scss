@@ -15,8 +15,12 @@
   max-width: rem(166px);
 
   &__icon {
-    width: rem(41px);
-    height: rem(41px);
+    width: rem(50px);
+    height: rem(50px);
+  }
+
+  &__pic {
+    color: #000;
   }
   
   &__text {

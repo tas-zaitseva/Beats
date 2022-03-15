@@ -4,7 +4,6 @@
   position: relative;
   
   &__container {
-    background: url(../images/headline-pic.png) right rem(15px) center / 53% auto no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,6 +11,10 @@
 
     @include tablets {
       background: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      background: url(../images/headline-pic.png) right rem(15px) center / 53% auto no-repeat;
     }
   }
 
@@ -21,10 +24,14 @@
     bottom: -4px;
     right: 26%;
     content: "";
-    width: 47px;
-    height: 11px;
+    width: rem(47px);
+    height: rem(11px);
     background: $light-gray;
     transform: rotate(-45deg);
+
+    @include tablets {
+      right: 14%;
+    }
   }
 
   &__header {
@@ -53,8 +60,8 @@
         content: "";
         width: rem(345px);
         height: rem(345px);
-        background: url(../images/headline-pic.png) center center no-repeat;
-        background-size: cover;
+        background: url(../images/headline-pic-small.png) center center no-repeat;
+        background-size: contain;
       }
     }
 

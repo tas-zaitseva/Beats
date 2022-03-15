@@ -20,6 +20,10 @@
     border-radius: 50%;
     background: $gray;
     transform: translateY(50%);
+
+    @include tablets {
+      left: 10%;
+    }
   }
 }
 
