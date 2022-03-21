@@ -17,6 +17,17 @@
     }
   }
 
+  &__contacts .contacts__phone {
+
+    @include tablets {
+      font-size: rem(18px);
+    }
+
+    @include tablets {
+      font-size: rem(16px);
+    }
+  }
+
   &__col {
     display: flex;
     align-items: center;
@@ -24,5 +35,18 @@
 
   &__col--align-right {
     justify-content: flex-end;
+  }
+
+  &__socials {
+    transform: translateX(20px);
+
+    @include tablets {
+      margin-right: 50px;
+    }
+
+    @include phones {
+      transform: translateX(0);
+      margin-right: 0;
+    }
   }
 }

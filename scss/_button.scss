@@ -1,6 +1,6 @@
 .button {
-  padding: 21px 41px;
-  font-size: 16px;
+  padding: rem(21px) rem(41px);
+  font-size: rem(16px);
   font-weight: 700;
   background-color: $red;
   color: $white;
@@ -8,7 +8,17 @@
   border-radius: 100px;
   transition: background-color .2s;
 
-  @media screen and (min-width: 768px) {
+  @include tablets {
+    font-size: rem(19px);
+    padding: rem(21px) rem(35px);
+  }
+
+  @include phones {
+    font-size: rem(16px);
+    padding: rem(21px) rem(41px);
+  }
+
+  @media screen and (min-width: 769px) {
     &:hover {
       background-color: $dark-red;
     }
@@ -17,9 +27,8 @@
   &--theme-transparent {
     background-color: transparent;
     text-transform: none;
-    font-size: 16px;
     font-weight: 400;
-    padding: 19px 6px;
+    padding: rem(19px) rem(6px);
     transition: color .2s;
 
     @include tablets {

@@ -5,15 +5,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: rem(48px);
+    margin-bottom: rem(40px);
   }
 
   &__title {
-    margin-bottom: rem(18px);
+    margin-bottom: rem(11px);
   }
 
   &__description {
-    width: 66%;
+    width: 70%;
     text-align: center;
 
     @include phones {
@@ -32,7 +32,7 @@
     @include phones {
       flex-direction: column;
       align-items: flex-start;
-      row-gap: rem(42px);
+      row-gap: rem(37px);
     }
   }
 
@@ -40,7 +40,7 @@
     display: block;
     position: absolute;
     bottom: -22px;
-    left: 22%;
+    left: 15%;
     content: "";
     border: rem(17px) solid transparent;
     border-bottom: 0;
@@ -69,7 +69,7 @@
       right: 0;
       transform: translateX(50%);
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 769px) {
         content: url(../images/reason-separator.png);
       }
     }
@@ -122,13 +122,13 @@
     height: rem(60px);
 
     @include tablets {
-      width: rem(68px);
-      height: rem(68px);
+      width: rem(60px);
+      height: rem(60px);
     }
 
     @include phones {
-      width: 53%;
-      height: 53%;
+      width: 48%;
+      height: 48%;
     }
   }
 
@@ -151,7 +151,7 @@
 
     @include tablets {
       font-size: rem(24px);
-      margin-bottom: rem(25px);
+      margin-bottom: rem(20px);
     }
 
     @include phones {
@@ -166,7 +166,8 @@
     line-height: 1.18;
 
     @include phones {
-      font-size: rem(17px);
+      font-size: rem(16px);
+      width: 94%;
     }
 
     p {

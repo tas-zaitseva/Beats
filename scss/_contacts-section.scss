@@ -11,8 +11,12 @@
     margin-top: auto;
     flex-shrink: 0;
 
+    @include tablets {
+      height: rem(107px);
+    }
+
     @include phones {
-      height: rem(172px);
+      height: rem(151px);
     }
   }
 

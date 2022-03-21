@@ -5,7 +5,7 @@
   &__list {
     display: flex;
     align-items: center;
-    column-gap: rem(10px);
+    column-gap: rem(8px);
 
     @include phones {
       column-gap: rem(16px);
@@ -15,8 +15,8 @@
   &__link {
     display: block;
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     overflow: hidden;
 

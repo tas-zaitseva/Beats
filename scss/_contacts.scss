@@ -10,7 +10,7 @@
 
   @include phones {
     align-items: center;
-    row-gap: rem(20px);
+    row-gap: rem(16px);
   }
 
   &__phone {
@@ -58,6 +58,10 @@
 
     @include tablets {
       font-size: rem(21px);
+    }
+
+    @include phones {
+      font-size: rem(18px);
     }
   }
 }

@@ -14,11 +14,7 @@ column-gap: rem(26px);
     row-gap: rem(8px);
 
     @include tablets {
-      row-gap: rem(12px);
-    }
-
-    @include phones {
-      row-gap: rem(20px);
+      row-gap: rem(10px);
     }
   }
 
@@ -38,11 +34,15 @@ column-gap: rem(26px);
     row-gap: rem(5px);
     flex: 1;
     user-select: none;
+
+    @include tablets {
+      row-gap: rem(4px);
+    }
   }
 
   &__title {
     color: $white;
-    font-size: 16px;
+    font-size: rem(16px);
   }
 
   &__input {
@@ -69,28 +69,27 @@ column-gap: rem(26px);
       margin-bottom: rem(27px);
 
       @include tablets {
-        min-height: rem(90px);
+        min-height: rem(82px);
         margin-bottom: rem(9.8px);
       }
 
       @include phones {
-        min-height: rem(93px);
-        margin-bottom: rem(9.8px);
+        margin-bottom: rem(12px);
       }
     }
   }
 
   &__call-back {
-    margin-bottom: rem(45px);
+    margin-bottom: rem(54px);
 
     @include tablets {
-      margin-top: rem(20px);
-      margin-bottom: rem(30px);
+      margin-top: rem(16px);
+      margin-bottom: rem(26px);
     }
 
     @include phones {
-      margin-top: rem(10px);
-      margin-bottom: rem(24px);
+      margin-top: rem(14px);
+      margin-bottom: rem(28px);
     }
   }
 

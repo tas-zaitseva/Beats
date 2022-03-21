@@ -10,14 +10,8 @@ body, html {
 html {
   font-size: $baseFontSize;
 
-  @include tablets {
-    // $baseFontSize: $tabletsFontSize;
-    font-size: $baseFontSize - 1px;
-  }
-
   @include phones {
-    // $baseFontSize: $phonesFontSize;
-    font-size: $baseFontSize - 2px;
+    font-size: 3.333vmin;
   }
 }
 
