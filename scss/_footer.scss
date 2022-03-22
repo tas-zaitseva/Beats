@@ -31,6 +31,14 @@
   &__col {
     display: flex;
     align-items: center;
+
+    @include tablets {
+      margin-left: rem(10px);
+    }
+
+    @include phones {
+      margin-left: 0;
+    }
   }
 
   &__col--align-right {
@@ -41,11 +49,11 @@
     transform: translateX(20px);
 
     @include tablets {
-      margin-right: 50px;
+      transform: translateX(0);
+      margin-right: rem(16px);
     }
 
     @include phones {
-      transform: translateX(0);
       margin-right: 0;
     }
   }

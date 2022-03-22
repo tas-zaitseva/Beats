@@ -5,19 +5,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: rem(40px);
+    margin-bottom: rem(52px);
+
+    @include tablets {
+      margin-bottom: rem(36px);
+    }
   }
 
   &__title {
-    margin-bottom: rem(11px);
+    margin-bottom: rem(16px);
   }
 
   &__description {
-    width: 70%;
+    max-width: 590px;
+    width: auto;
     text-align: center;
 
+    @include tablets {
+      width: 76%;
+    }
+
     @include phones {
-      width: 85%;
+      width: auto;
+      max-width: 436px;
     }
 
     p {
@@ -27,7 +37,8 @@
   
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    row-gap: rem(31px);
 
     @include phones {
       flex-direction: column;
@@ -108,7 +119,7 @@
     overflow: hidden;
     background: $lightest-gray;
     flex-shrink: 0;
-    margin-bottom: rem(27px);
+    margin-bottom: rem(29px);
 
     @include phones {
       width: 26vw;

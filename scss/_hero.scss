@@ -84,7 +84,8 @@
       font-size: rem(32px);
       margin-top: rem(56px);
       margin-bottom: rem(16px);
-      width: rem(336px);
+      max-width: 303px;
+      width: auto;
     }
   }
 
@@ -103,7 +104,8 @@
     }
   
     @include phones {
-      width: 68%;
+      width: auto;
+      max-width: 341px;
       margin-bottom: rem(24px);
       font-size: rem(18px);
     }

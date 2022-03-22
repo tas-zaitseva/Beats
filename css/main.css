@@ -15,7 +15,7 @@ html {
 }
 @media screen and (max-width: 480px) {
   html {
-    font-size: 3.333vmin;
+    font-size: 3.33333vmin;
   }
 }
 
@@ -276,7 +276,8 @@ textarea {
     font-size: 2rem;
     margin-top: 3.5rem;
     margin-bottom: 1rem;
-    width: 21rem;
+    max-width: 303px;
+    width: auto;
   }
 }
 .hero__subtitle {
@@ -296,7 +297,8 @@ textarea {
 }
 @media screen and (max-width: 480px) {
   .hero__subtitle {
-    width: 68%;
+    width: auto;
+    max-width: 341px;
     margin-bottom: 1.5rem;
     font-size: 1.125rem;
   }
@@ -641,18 +643,30 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.25rem;
+}
+@media screen and (max-width: 768px) {
+  .reasons__headline {
+    margin-bottom: 2.25rem;
+  }
 }
 .reasons__title {
-  margin-bottom: 0.6875rem;
+  margin-bottom: 1rem;
 }
 .reasons__description {
-  width: 70%;
+  max-width: 590px;
+  width: auto;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .reasons__description {
+    width: 76%;
+  }
 }
 @media screen and (max-width: 480px) {
   .reasons__description {
-    width: 85%;
+    width: auto;
+    max-width: 436px;
   }
 }
 .reasons__description p {
@@ -662,9 +676,10 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 1.9375rem;
 }
 @media screen and (max-width: 480px) {
   .reasons__list {
@@ -771,7 +786,7 @@ textarea {
   background: #F2F5F4;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-bottom: 1.6875rem;
+  margin-bottom: 1.8125rem;
 }
 @media screen and (max-width: 480px) {
   .reason__icon-container {
@@ -1444,6 +1459,16 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .footer__col {
+    margin-left: 0.625rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer__col {
+    margin-left: 0;
+  }
+}
 .footer__col--align-right {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -1455,13 +1480,13 @@ textarea {
 }
 @media screen and (max-width: 768px) {
   .footer__socials {
-    margin-right: 50px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    margin-right: 1rem;
   }
 }
 @media screen and (max-width: 480px) {
   .footer__socials {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
     margin-right: 0;
   }
 }

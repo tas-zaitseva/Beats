@@ -11,7 +11,7 @@ html {
   font-size: $baseFontSize;
 
   @include phones {
-    font-size: 3.333vmin;
+    font-size: 3.33333vmin;
   }
 }
 
