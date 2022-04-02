@@ -104,10 +104,18 @@
     }
   
     @include phones {
+      font-family: 'Play', helvetica, sans-serif;
       width: auto;
       max-width: 341px;
       margin-bottom: rem(24px);
       font-size: rem(18px);
+    }
+  }
+
+  &__button, .button{
+    @include phones {
+      font-size: rem(19px);
+      padding: rem(21px) rem(37px);
     }
   }
 }

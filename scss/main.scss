@@ -14,6 +14,7 @@ $baseFontSize: 16px;
 
 //sizes
 $container-max-width: 940px;
+$container-width: 95%;
 $icon-container-width: 128px;
 
 //breakpoints
@@ -51,3 +52,8 @@ $z-sidebar: 100;
 @import "footer";
 @import "socials";
 @import "hamburger-menu";
+@import "close";
+@import "products";
+@import "slider";
+@import "dropdown";
+

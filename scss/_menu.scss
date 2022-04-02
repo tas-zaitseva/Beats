@@ -9,6 +9,7 @@
   &__list {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     column-gap: rem(27.5px);
     row-gap: rem(5px);
@@ -20,4 +21,34 @@
     white-space: nowrap;
   }
 }
+
+.menu--inner {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #333537;
+  color: $white;
+  
+  .menu__list {
+    flex-direction: column;
+  }
+  
+  .menu__link {
+    font-family: 'Play', helvetica, sans-serif;
+    font-size: rem(36px);
+    font-weight: normal;
+    line-height: 2;
+  }
+  
+
+  @include tablets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 

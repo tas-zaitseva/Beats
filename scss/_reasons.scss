@@ -1,6 +1,17 @@
 .reasons {
   position: relative;
 
+  &__container {
+
+    @include tablets {
+      width: 99%;
+    }
+
+    @include phones {
+      width: 95%;
+    }
+  }
+
   &__headline {
     display: flex;
     flex-direction: column;
@@ -8,12 +19,20 @@
     margin-bottom: rem(52px);
 
     @include tablets {
-      margin-bottom: rem(36px);
+      margin-bottom: rem(42px);
+    }
+
+    @include phones {
+      margin-bottom: rem(48px);
     }
   }
 
   &__title {
     margin-bottom: rem(16px);
+
+    @include tablets {
+      margin-bottom: rem(12px);
+    }
   }
 
   &__description {
@@ -43,7 +62,7 @@
     @include phones {
       flex-direction: column;
       align-items: flex-start;
-      row-gap: rem(37px);
+      row-gap: rem(40px);
     }
   }
 
@@ -57,6 +76,7 @@
     border-bottom: 0;
     border-top: rem(37px) solid $red;
     transform: rotate(45deg);
+    z-index: 100;
 
     @include tablets {
       left: 10%;
@@ -69,7 +89,7 @@
     position: relative;
 
     @include tablets {
-      padding: 0 0.5%;
+      padding: 0 0.4%;
     }
 
     &:after {

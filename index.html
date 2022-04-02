@@ -41,7 +41,7 @@
                 <div class="contacts__text">8 800 903 90 90</div>
               </a>
             </adress>
-            <a href="#" class="hamburger-menu">
+            <a href="#" class="hamburger-menu" id="hamburgerMenu">
               <div class="hamburger-menu__display"></div>
             </a>
           </div>
@@ -83,7 +83,7 @@
     </section>
     <main class="main-content">
       <section class="section reasons">
-        <div class="container">
+        <div class="container reasons__container">
           <div class="reasons__headline section-headline">
             <h2 class="reasons__title section-title">Почему Beats Solo 3?</h2>
             <div class="reasons__description section-description">
@@ -137,6 +137,105 @@
               </div>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="section products">
+        <div class="container products__container">
+          <div class="products__slider slider">
+            <div class="slider__arrows">
+              <a href="#" class="slider__arrow slider__arrow--direction-prev">
+                <svg class="slider__arrow-pic">
+                  <use xlink:href="svg/sprite.svg#arrow"></use>
+                </svg>
+              </a>
+              <a href="#" class="slider__arrow slider__arrow--direction-next">
+                <svg class="slider__arrow-pic">
+                  <use xlink:href="svg/sprite.svg#arrow"></use>
+                </svg>
+              </a>
+            </div>
+            <ul class="products__list">
+              <li class="products__item product">
+                <div class="product__img"><img class="product__pic" src="images/products-color-silver.png" alt="headphones"></div>
+                <div class="product__content">
+                  <div class="product__dropdown dropdown">
+                    <div class="dropdown__icon">
+                      <svg class="dropdown__pic">
+                        <use xlink:href="svg/sprite.svg#gear"></use>
+                      </svg>
+                    </div>
+                    <div class="dropdown__content">
+                      <ul class="dropdown__list">
+                        <li class="dropdown__item">
+                          <div class="dropdown__item-icon">
+                            <svg class="dropdown__item-pic">
+                              <use xlink:href="svg/sprite.svg#spec1"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown__item-description">Bluetooth</div>
+                          <div class="dropdown__item-value">4.0</div>
+                        </li>
+                        <li class="dropdown__item">
+                          <div class="dropdown__item-icon">
+                            <svg class="dropdown__item-pic">
+                              <use xlink:href="svg/sprite.svg#spec2"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown__item-description">Дальность</div>
+                          <div class="dropdown__item-value">12 м</div>
+                        </li>
+                        <li class="dropdown__item">
+                          <div class="dropdown__item-icon">
+                            <svg class="dropdown__item-pic">
+                              <use xlink:href="svg/sprite.svg#spec3"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown__item-description">Зарядка</div>
+                          <div class="dropdown__item-value">3 ч</div>
+                        </li>
+                        <li class="dropdown__item">
+                          <div class="dropdown__item-icon">
+                            <svg class="dropdown__item-pic">
+                              <use xlink:href="svg/sprite.svg#spec4"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown__item-description">Вес</div>
+                          <div class="dropdown__item-value">215 гр</div>
+                        </li>
+                        <li class="dropdown__item">
+                          <div class="dropdown__item-icon">
+                            <svg class="dropdown__item-pic">
+                              <use xlink:href="svg/sprite.svg#spec5"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown__item-description">Гарантия</div>
+                          <div class="dropdown__item-value">1 год</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <h3 class="product__header">beats solo 3. цвет «атласное серебро»</h3>
+                  <div class="product__description">
+                    <p>Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.</p>
+                  </div>
+                  <ul class="product__features">
+                    <li class="product__feature">
+                      <div class="product__feature-description">Зарядка</div>
+                      <div class="product__feature-value">2 часа</div>
+                    </li>
+                    <li class="product__feature">
+                      <div class="product__feature-description">Вес</div>
+                      <div class="product__feature-value">215 грамм</div>
+                    </li>
+                  </ul>
+                  <div class="product__block">
+                    <div class="product__price">14 990 ₽</div>
+                    <a href="#" class="button product__button">Заказать</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="section feedback-section">
@@ -326,6 +425,22 @@
       </ul>
     </aside>
   </div>
-  
-</body>
+  <template id="innerMenu">
+    <a href="#" class="menu__close close" id="closeMenu">
+      <svg class="close__pic">
+        <use xlink:href="svg/sprite.svg#close"></use>
+      </svg>
+    </a>
+    <ul class="menu__list">
+      <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">Наушники</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">Цвета</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+    </ul>
+  </template>
+  <script src="js/index.js"></script>
+  </body>
 </html>

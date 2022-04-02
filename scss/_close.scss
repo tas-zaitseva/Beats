@@ -1,0 +1,18 @@
+.close {
+  width: rem(104px);    //сделала так, чтобы на маленьком экране было проще попасть по крестику
+  height: rem(104px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: .7;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__pic {
+    width: 20px;
+    height: 20px;
+  }
+  
+}
