@@ -7,33 +7,28 @@
     width: 14px;
     height: 27px;
 
+    @include tablets {
+      top: rem($product-img-width/2);
+    }
 
     
     &--direction-prev {
-      left: 0;
-      transform: translateX(-100%) translateY(-50%);
+      left: -10px;
+      transform: translateY(-50%);
 
       @include tablets {
-        left: 50%;
-        transform: translateX(-230px) translateY(-160px); //как можно в данном случае расположить стрелки по центру картинки, если они лежат в разных местах? или тогда проще расположить их в одном контейнере? с другой стороны их нельзя расположить в одном контейнере, потому что они перелистывают слайды, и лежат вне их
-      }
-
-      @include phones {
-        transform: translateX(-45vw) translateY(-33vw);
+        left: 50%;  //не стала применять жесткий left или right от краев контейнера по макету, чтобы при сжатии стрелки не залезли на картинку. Пошла от центра. Мой способ ок?
+        transform: translateX(rem(-($product-img-width/2 + 53px))) translateY(-50%);
       }
     }
     
     &--direction-next {
-      transform: translateX(100%) translateY(-50%) rotate(180deg);
-      right: 0;
+      right: -10px;
+      transform: translateY(-50%) rotate(180deg);
 
       @include tablets {
         right: 50%;
-        transform: translateX(230px) translateY(-160px) rotate(180deg);
-      }
-
-      @include phones {
-        transform: translateX(45vw) translateY(-33vw) rotate(180deg);
+        transform: translateX(rem($product-img-width/2 + 53px)) translateY(-50%) rotate(180deg);
       }
     }
   }

@@ -38,7 +38,7 @@
     @include tablets {
       margin: 0;
       margin-bottom: rem(42px);
-      width: rem(306px);
+      width: rem($product-img-width);
     }
 
     @include phones {
