@@ -1,5 +1,6 @@
 .feedback-section {
   position: relative;
+  background: $white;
 
   &__headline {
     margin-bottom: rem(32px);
@@ -24,6 +25,7 @@
     border-radius: 50%;
     background: $gray;
     transform: translateY(50%);
+    z-index: 10;
 
     @include tablets {
       left: 10%;

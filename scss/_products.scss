@@ -1,11 +1,8 @@
 .products {
   background: #F8FAF9;
+  position: relative;
 
-  &__container {
-    position: relative;
-  }
-
-  &::after {
+  &:after {
     position: absolute;
     display: block;
     content: "";
@@ -15,7 +12,7 @@
     right: 15%;
     bottom: 0;
     transform: translateY(7px) rotate(30deg);
-  
+    z-index: 10;
   }
 }
 
@@ -72,7 +69,6 @@
 
   &__header {
     font-size: rem(36px);
-    // width: 0.42 * $container-width; Как можно сделать, чтобы при уменьшении размера контейнера меньше 940px заголовок тоже начал уменьшаться, чтобы на него не залез сайдбар?
     text-transform: uppercase;
     line-height: 1.16;
     margin-bottom: rem(24px);

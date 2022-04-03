@@ -208,6 +208,7 @@ textarea {
   background: #c4c4c4;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  z-index: 10;
 }
 @media screen and (max-width: 768px) {
   .hero:after {
@@ -473,6 +474,7 @@ textarea {
   left: 0;
   background: #333537;
   color: #fff;
+  z-index: 1000;
 }
 .menu--inner .menu__list {
   -webkit-box-orient: vertical;
@@ -681,6 +683,7 @@ textarea {
 
 .reasons {
   position: relative;
+  background: #fff;
 }
 @media screen and (max-width: 768px) {
   .reasons__container {
@@ -774,6 +777,7 @@ textarea {
   border-top: 2.3125rem solid #E01F3D;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  z-index: 10;
 }
 @media screen and (max-width: 768px) {
   .reasons:after {
@@ -938,6 +942,7 @@ textarea {
 
 .feedback-section {
   position: relative;
+  background: #fff;
 }
 .feedback-section__headline {
   margin-bottom: 2rem;
@@ -964,6 +969,7 @@ textarea {
   background: #868686;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
+  z-index: 10;
 }
 @media screen and (max-width: 768px) {
   .feedback-section:after {
@@ -1683,11 +1689,9 @@ textarea {
 
 .products {
   background: #F8FAF9;
-}
-.products__container {
   position: relative;
 }
-.products::after {
+.products:after {
   position: absolute;
   display: block;
   content: "";
@@ -1698,6 +1702,7 @@ textarea {
   bottom: 0;
   -webkit-transform: translateY(7px) rotate(30deg);
           transform: translateY(7px) rotate(30deg);
+  z-index: 10;
 }
 
 .product {
