@@ -774,7 +774,6 @@ textarea {
   border-top: 2.3125rem solid #E01F3D;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  z-index: 100;
 }
 @media screen and (max-width: 768px) {
   .reasons:after {
@@ -1684,7 +1683,6 @@ textarea {
 
 .products {
   background: #F8FAF9;
-  position: relative;
 }
 .products__container {
   position: relative;

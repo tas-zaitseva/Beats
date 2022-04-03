@@ -76,7 +76,6 @@
     border-bottom: 0;
     border-top: rem(37px) solid $red;
     transform: rotate(45deg);
-    z-index: 100;
 
     @include tablets {
       left: 10%;
