@@ -18,7 +18,7 @@
 }
 
 .modal {
-  max-width: 400px;
+  max-width: rem(400px);
   display: flex;
   flex-direction: column;
   background: $white;
