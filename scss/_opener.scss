@@ -1,0 +1,23 @@
+.opener {
+  width: 8px;
+  height: 8px;
+  color: $red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(0deg);
+  transition: transform .5s;
+
+  @include tablets {
+    color: #365A49;
+  }
+
+  @include phones {
+    color: $red;
+  }
+
+  &--active {
+    transform: rotate(180deg);
+  }
+}
+

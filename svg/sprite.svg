@@ -148,5 +148,10 @@
     </g>
   </symbol>
 
+  <symbol id="opener" viewBox="0 0 8 7" preserveAspectRatio="xMidYMid">
+    <g fill="currentColor">
+      <path d="M4 7L0.102887 0.249999L7.89711 0.25L4 7Z"/>
+    </g>
+  </symbol>
 
 </svg>

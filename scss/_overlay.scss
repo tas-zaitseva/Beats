@@ -1,0 +1,38 @@
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: rgba(51, 53, 55, .98);
+  z-index: 10000;
+
+  &--shown {
+    display: flex;
+  }
+}
+
+.modal {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  align-items: center;
+  padding: rem(37px) rem(55px);
+  text-align: center;
+
+  &__content {
+    font-size: rem(18px);
+    font-weight: medium;
+    margin-bottom: rem(18px);
+
+    &--error {
+      color: $red;
+    }
+  }
+}

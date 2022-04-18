@@ -1,17 +1,19 @@
 .slider {
   position: relative;
+  width: $container-width;
+  max-width: $container-max-width;
   
   &__arrow {
     position: absolute;
     top: 50%;
     width: 14px;
     height: 27px;
+    z-index: 100;
 
     @include tablets {
       top: rem($product-img-width/2);
     }
 
-    
     &--direction-prev {
       left: -10px;
       transform: translateY(-50%);
@@ -32,6 +34,11 @@
       }
     }
   }
-  
+}
+
+.bx-wrapper {
+  box-shadow: none;
+  border: none;
+  background: transparent;
 }
 
