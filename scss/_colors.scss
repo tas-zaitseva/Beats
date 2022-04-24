@@ -1,0 +1,123 @@
+.colors {
+  background: url(./../images/colors_bg.png) right center no-repeat;
+  background-size: cover;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  
+  @include tablets {
+    background: url(./../images/colors_bg.png) right -140px center no-repeat;
+    background-size: cover;
+  }
+
+  @include phones {
+    background: url(./../images/colors_bg.png) right -350px center no-repeat;
+    background-size: cover;
+  }
+
+  &__headline {
+    padding-top: rem(115px);
+    padding-left: rem(84px);
+    width: auto;
+
+    @include tablets {
+      padding-top: rem(91px);
+      padding-left: rem(40px);
+    }
+
+    @include tablets {
+      padding-top: rem(76px);
+      padding-left: 10px;
+    }
+  }
+
+  &__title {
+    color: $white;
+  }
+}
+
+.colors-menu {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  @include phones {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  &__item {
+    display: flex;
+    color: $white;
+    font-family: 'Alegreya Sans', helvetica, sans-serif;
+    
+    &:nth-child(1) .colors-menu__button {
+      background: #999;
+    }
+    
+    &:nth-child(2) .colors-menu__button {
+      background: $black;
+    }
+    
+    &:nth-child(3) .colors-menu__button {
+      background: $red;
+    }
+
+    &--active {
+      @include phones {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 300;
+      }
+    }
+  }
+
+  &__button {
+    width: rem(130px);
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include tablets {
+      width: rem(102px);
+    }
+
+    @include phones {
+      width: rem(90px);
+    }
+  }
+
+  &__title {
+    font-size: rem(36px);
+    font-weight: bold;
+    position: absolute;
+    bottom: rem(40px);
+    transform: rotate(-90deg) translateX(50%);
+    white-space: nowrap;
+  }
+
+  &__content {
+    width: 0;
+    overflow: hidden;
+    background: rgba(51, 53, 55, .9);
+    font-size: rem(16px);
+    line-height: rem(24px);
+    font-weight: normal;
+    padding: 0;
+    transition: width .5s;
+
+    @include phones { //не нравится как выглядит анимация в этом случае
+      transition: none;
+    }
+  }
+
+  &__text {
+    padding: rem(31px) rem(53px) rem(10px) rem(38px);
+  }
+}

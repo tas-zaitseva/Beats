@@ -9,7 +9,7 @@
     border-radius: 50%;
   }
 
-  &--active, &:hover {
+  &--active {
     outline: 4px solid $red;
     outline-offset: -4px;
   } 

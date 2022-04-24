@@ -32,3 +32,8 @@ $('.team-member__button').on('click', function() {
     $(this).find('.opener').addClass('opener--active');
   }
 })
+
+$(window).resize(function() {
+  $('.team-member__description').height(0);
+  $('.opener').removeClass('opener--active');
+})

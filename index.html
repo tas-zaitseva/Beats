@@ -423,13 +423,32 @@
           </ul>
         </div>
       </section>
+      <section class="section colors">
+        <div class="section-headline colors__headline">
+          <h2 class="section-title colors__title">Цвета</h2>
+        </div>
+        <ul class="colors__list colors-menu" id="horizontalMenu">
+          <li class="colors-menu__item">
+            <a href="#" class="colors-menu__button"><div class="colors-menu__title">«Атласное серебро»</div></a>
+            <div class="colors-menu__content"><p class="colors-menu__text">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p></div>
+          </li>
+          <li class="colors-menu__item">
+            <a href="#" class="colors-menu__button"><div class="colors-menu__title">«Чёрный матовый»</div></a>
+            <div class="colors-menu__content"><p class="colors-menu__text">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p></div>
+          </li>
+          <li class="colors-menu__item">
+            <a href="#" class="colors-menu__button"><div class="colors-menu__title">«Красный цитрус»</div></a>
+            <div class="colors-menu__content"><p class="colors-menu__text">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p></div>
+          </li>
+        </ul>
+      </section>
       <section class="section feedback-section">
         <div class="container">
           <div class="feedback-section__headline section-headline">
             <h2 class="feedback-section__title section-title">Отзывы</h2>
           </div>
           <div class="feedback-section__element feedback">
-            <div class="feedback__element single-feedback single-feedback--active">
+            <div class="feedback__element single-feedback single-feedback--active" data-item="1">
               <div class="single-feedback__avatar">
                 <img src="images/User_avatar1.png" alt="User avatar" class="single-feedback__pic">
               </div>
@@ -441,7 +460,7 @@
                   <div class="single-feedback__author">Билли Айлиш</div>
               </article>
             </div>
-            <div class="feedback__element single-feedback">
+            <div class="feedback__element single-feedback" data-item="2">
               <div class="single-feedback__avatar">
                 <img src="images/User_avatar2.png" alt="User avatar" class="single-feedback__pic">
               </div>
@@ -453,7 +472,7 @@
                   <div class="single-feedback__author">Вадим Грачев</div>
               </article>
             </div>
-            <div class="feedback__element single-feedback">
+            <div class="feedback__element single-feedback" data-item="3">
               <div class="single-feedback__avatar">
                 <img src="images/User_avatar3.png" alt="User avatar" class="single-feedback__pic">
               </div>
@@ -465,14 +484,14 @@
                   <div class="single-feedback__author">Мария Орлова</div>
               </article>
             </div>
-            <ul class="feedback__switcher switcher">
-              <li class="switcher__item interactive-avatar interactive-avatar--active">
+            <ul class="feedback__switcher switcher" id="interactive-avatars">
+              <li class="switcher__item interactive-avatar interactive-avatar--active" data-open="1">
                 <a href="#" class="interactive-avatar__link"><img src="images/User_avatar1.png" alt="User avatar" class="interactive-avatar__pic"></a>
               </li>
-              <li class="switcher__item interactive-avatar">
+              <li class="switcher__item interactive-avatar" data-open="2">
                 <a href="#" class="interactive-avatar__link"><img src="images/User_avatar2.png" alt="User avatar" class="interactive-avatar__pic"></a>
               </li>
-              <li class="switcher__item interactive-avatar">
+              <li class="switcher__item interactive-avatar" data-open="3">
                 <a href="#" class="interactive-avatar__link"><img src="images/User_avatar3.png" alt="User avatar" class="interactive-avatar__pic"></a>
               </li>
             </ul>
@@ -664,5 +683,6 @@
   <script src="js/slider.js"></script>
   <script src="js/slideshow.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/colors_menu.js"></script>
   </body>
 </html>
