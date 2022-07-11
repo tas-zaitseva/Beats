@@ -19,7 +19,7 @@
       transform: translateY(-50%);
 
       @include tablets {
-        left: 50%;  //не стала применять жесткий left или right от краев контейнера по макету, чтобы при сжатии стрелки не залезли на картинку. Пошла от центра. Мой способ ок?
+        left: 50%;
         transform: translateX(rem(-($product-img-width/2 + 53px))) translateY(-50%);
       }
     }

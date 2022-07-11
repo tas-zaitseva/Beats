@@ -1746,6 +1746,14 @@ textarea {
           transform: translateY(7px) rotate(30deg);
   z-index: 10;
 }
+.products__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
 .product {
   display: -webkit-box;
