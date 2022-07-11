@@ -6,7 +6,7 @@
 }
 
 body, html {
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 
@@ -30,15 +30,18 @@ body {
 }
 
 .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100%;
+  position: relative;
+  height: 100%;
   overflow: hidden;
+}
+
+.main-content {
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  will-change: transform;
 }
 
 p {
@@ -110,8 +113,8 @@ textarea {
 }
 
 .section {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,6 +351,8 @@ textarea {
   height: 1rem;
   border-radius: 50%;
   border: 1px solid transparent;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
   position: relative;
 }
 .sidebar__menu-link::after {
@@ -357,19 +362,34 @@ textarea {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 50%;
-  background: #292929;
+  background-color: #292929;
   opacity: 0.6;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.sidebar__menu-link:hover {
+  border-color: #E01F3D;
+}
+.sidebar__menu-link:hover::after {
+  background-color: #E01F3D;
+  opacity: 1;
 }
 .sidebar__menu-link--active {
   border-color: #E01F3D;
 }
 .sidebar__menu-link--active::after {
-  background: #E01F3D;
+  background-color: #E01F3D;
   opacity: 1;
+}
+.sidebar__menu--dark .sidebar__menu-link::after {
+  background-color: #fff;
+}
+.sidebar__menu--dark .sidebar__menu-link:hover, .sidebar__menu--dark .sidebar__menu-link--active {
+  border-color: #fff;
 }
 @media screen and (max-width: 768px) {
   .sidebar {
@@ -463,6 +483,13 @@ textarea {
   font-family: "Alegreya Sans", helvetica, sans-serif;
   font-size: 1.125rem;
   white-space: nowrap;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+@media screen and (min-width: 768px) {
+  .menu__link:hover {
+    color: #E01F3D;
+  }
 }
 
 .menu--inner {

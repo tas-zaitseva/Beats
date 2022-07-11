@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.73.0"
+  },
+  "name": "beats---headphones",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emangelina/Beats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emangelina/Beats/issues"
+  },
+  "homepage": "https://github.com/Emangelina/Beats#readme",
+  "description": ""
+}
