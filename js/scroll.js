@@ -2,10 +2,10 @@
 document.addEventListener('DOMContentLoaded', function() {
   const sections = document.querySelectorAll('section');
   const display = document.querySelector('.main-content');
-
+  
   const sideMenu = document.querySelector('.sidebar').querySelectorAll('.sidebar__menu-link');
   const allMenu = document.querySelectorAll('[data-link]');
-
+  
   let inScroll = false;
   
   window.addEventListener('wheel', function(event) {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dataLink = activeSection.nextElementSibling.dataset.open;
         scrollToSection(dataLink);
         styleSideMenu(dataLink);
-      
+        
       } else if (event.deltaY < 0 && activeSection.previousElementSibling) {
         const dataLink = activeSection.previousElementSibling.dataset.open;
         scrollToSection(dataLink);
@@ -26,13 +26,39 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(() => {
         inScroll = false;
       }, 1100);
-
+      
       setTimeout(() => {
         styleSideLighter();
       }, 300);
     }
   });
-
+  
+  const mobileDetect = new MobileDetect(window.navigator.userAgent);
+  const isMobile = mobileDetect.mobile();
+  
+  if (isMobile) {
+    //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+    $(function() {
+      $("body").swipe( {
+        swipe:function(event, direction) {
+          const activeSection = document.querySelector('.active-section');
+          if (direction === 'up' && activeSection.nextElementSibling) {
+            const dataLink = activeSection.nextElementSibling.dataset.open;
+            scrollToSection(dataLink);
+          } else if (direction === 'down' && activeSection.previousElementSibling) {
+            const dataLink = activeSection.previousElementSibling.dataset.open;
+            scrollToSection(dataLink);
+          }
+        }
+      });
+    });
+  
+    const wrapper = document.querySelector('.wrapper');
+    wrapper.addEventListener('touchmove', (event) => {
+      event.preventDefault();
+    })
+  }
+  
   window.addEventListener('keydown', function(event) {
     const activeSection = document.querySelector('.active-section');
     const userTypingInInput = event.target.tagName == 'TEXTAREA' || event.target.tagName == 'INPUT';
@@ -98,6 +124,9 @@ document.addEventListener('DOMContentLoaded', function() {
       sidebar.classList.remove('sidebar__menu--dark');
     }
   }
+
+
+
 })
 
 
