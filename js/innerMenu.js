@@ -1,6 +1,6 @@
 import scrollToSection from './scroll.js';
 
-// const openMenu = document.querySelector('#hamburgerMenu');
+const openMenu = document.querySelector('#hamburgerMenu');
 const body = document.body;
 const templateMenu = document.querySelector('#innerMenu');
 
