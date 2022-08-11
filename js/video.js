@@ -1,5 +1,6 @@
 let player;
 const playerContainer = document.querySelector('.video');
+const playerWrapper = document.querySelector('.video__wrapper');
 
 const playBtn = document.querySelector('.video__start');
 const pauseTemplate = document.querySelector('#video-pause');
@@ -130,7 +131,6 @@ function onPlayerStateChange(event) {
 }
 
 function onYouTubeIframeAPIReady() {
-  const playerWrapper = document.querySelector('.video__wrapper');
   player = new YT.Player('youtube-player', {
     height: `${playerWrapper.clientHeight}`,
     width: `${playerWrapper.clientWidth}`,
