@@ -498,47 +498,45 @@
           </div>
         </div>
       </section>
-      <section class="section player-section" data-open="player">
-        <div class="container player-section-container">
-          <div class="player-section__headline section-headline">
-            <h2 class="player-section__title section-title">Как мы работаем</h2>
+      <section class="section video" data-open="player">
+        <div class="container video__container">
+          <div class="video__headline section-headline">
+            <h2 class="video__title section-title">Как мы работаем</h2>
           </div>
-          <div class="player-section__container">
-            <div class="player">
-              <div class="player__wrapper">
-                <div id="youtube-player" class="player__element"></div>
-                <div class="player__splash"></div>
+          <div class="video__wrapper">
+            <div class="video__player">
+              <div id="youtube-player" class="video__element"></div>
+              <div class="video__splash"></div>
+            </div>
+            <div class="video__controls">
+              <button class="video__start">
+                <svg class="video__start-pic">
+                  <use xlink:href="svg/sprite.svg#play"></use>
+                </svg>
+              </button>
+              <template id="video-pause">
+                <svg class="video__start-pic">
+                  <use xlink:href="svg/sprite.svg#pause"></use>
+                </svg>
+              </template>
+              <template id="video-play">
+                <svg class="video__start-pic">
+                  <use xlink:href="svg/sprite.svg#play"></use>
+                </svg>
+              </template>
+              <div class="video__playback">
+                <div class="video__playback-slider"></div>
+                <button class="video__playback-button"></button>
               </div>
-              <div class="player__controls">
-                <button class="player__start">
-                  <svg class="player__start-pic">
-                    <use xlink:href="svg/sprite.svg#play"></use>
+              <div class="video__volume">
+                <div class="video__volume-icon">
+                  <svg class="video__volume-pic">
+                    <use xlink:href="svg/sprite.svg#volume"></use>
                   </svg>
-                </button>
-                <template id="player-pause">
-                  <svg class="player__start-pic">
-                    <use xlink:href="svg/sprite.svg#pause"></use>
-                  </svg>
-                </template>
-                <template id="player-play">
-                  <svg class="player__start-pic">
-                    <use xlink:href="svg/sprite.svg#play"></use>
-                  </svg>
-                </template>
-                <div class="player__playback">
-                  <div class="player__playback-slider"></div>
-                  <button class="player__playback-button"></button>
                 </div>
-                <div class="player__volume">
-                  <div class="player__volume-icon">
-                    <svg class="player__volume-pic">
-                      <use xlink:href="svg/sprite.svg#volume"></use>
-                    </svg>
-                  </div>
-                  <div class="player__volume-switcher">
-                    <div class="player__volume-switcher-range"></div>
-                    <button class="player__volume-switcher-button"><button>
-                  </div>
+                <div class="video__volume-switcher">
+                  <div class="video__volume-switcher-range"></div>
+                  <button class="video__volume-switcher-button"><button>
                 </div>
               </div>
             </div>
@@ -735,7 +733,7 @@
   <script src="js/colors_menu.js"></script>
   <script src="js/scroll.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="js/player.js"></script>
+  <script src="js/video.js"></script>
   <script src="js/map.js"></script>
   
 </body>
