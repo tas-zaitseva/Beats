@@ -5,14 +5,15 @@
 
 const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
+let slider;
 
 if (isMobile) {
-  const slider = $('.products__list').bxSlider({
+  slider = $('.products__list').bxSlider({
     pager: false,
     controls: false
   });
 } else {
-  const slider = $('.products__list').bxSlider({
+  slider = $('.products__list').bxSlider({
     pager: false,
     controls: false,
     touchEnabled: false
