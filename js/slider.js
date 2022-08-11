@@ -3,10 +3,22 @@
 //   $('.product').toggleClass('product--hidden');
 // })
 
-const slider = $('.products__list').bxSlider({
-  pager: false,
-  controls: false
-});
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
+if (isMobile) {
+  const slider = $('.products__list').bxSlider({
+    pager: false,
+    controls: false
+  });
+} else {
+  const slider = $('.products__list').bxSlider({
+    pager: false,
+    controls: false,
+    touchEnabled: false
+  });
+}
+
 
 $('.slider__arrow--direction-prev').on('click', function(event) {
   event.preventDefault();
