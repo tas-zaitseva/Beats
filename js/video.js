@@ -1,5 +1,5 @@
 let player;
-let ratio = 662 / 392;
+let ratio = 16 / 9;
 
 const playerContainer = document.querySelector('.video');
 const playerWrapper = document.querySelector('.video__wrapper');
