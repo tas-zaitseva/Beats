@@ -1,4 +1,6 @@
 let player;
+let ratio = 662 / 392;
+
 const playerContainer = document.querySelector('.video');
 const playerWrapper = document.querySelector('.video__wrapper');
 
@@ -16,7 +18,9 @@ const volumeSwitcher = document.querySelector('.video__volume-switcher');
 const volumeSwitcherRange = document.querySelector('.video__volume-switcher-range');
 const volumeBtn = document.querySelector('.video__volume-switcher-button');
 
-
+document.addEventListener('DOMContentLoaded', ()=> {
+  setVideoHeight();
+})
 
 function eventsInit() {
   playBtn.addEventListener('click', (event)=> {
@@ -103,7 +107,11 @@ function onPlayerReady() {
   }, 1000)
   
   player.setVolume(100);
-  
+
+  window.addEventListener('resize', ()=> {
+    resizeVideo();
+    setVideoHeight();
+  });
 }
 
 function onPlayerStateChange(event) {
@@ -119,12 +127,12 @@ function onPlayerStateChange(event) {
       playerContainer.classList.remove('video--active');
       playBtn.innerHTML = playTemplate.innerHTML;
       break;
-      case 1:
-        playerContainer.classList.add('video--active');
-        playBtn.innerHTML = pauseTemplate.innerHTML;
-        break;
-        case 2:
-          playerContainer.classList.remove('video--active');
+    case 1:
+      playerContainer.classList.add('video--active');
+      playBtn.innerHTML = pauseTemplate.innerHTML;
+      break;
+    case 2:
+      playerContainer.classList.remove('video--active');
       playBtn.innerHTML = playTemplate.innerHTML;
       break;
   }
@@ -132,8 +140,8 @@ function onPlayerStateChange(event) {
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('youtube-player', {
-    height: `${playerWrapper.clientHeight}`,
     width: `${playerWrapper.clientWidth}`,
+    height: `${playerWrapper.clientHeight}`,
     videoId: '1_f3RcyYdfA',
     events: {
       'onReady': onPlayerReady,
@@ -150,3 +158,19 @@ function onYouTubeIframeAPIReady() {
 }
 
 eventsInit();
+
+function setVideoHeight() {
+  let videoWidth = window.getComputedStyle(playerWrapper).width;
+  let videoHeight = parseInt(videoWidth) / ratio;
+  playerWrapper.style.height = `${videoHeight}px`;
+}
+
+function resizeVideo() {
+  const video = document.querySelector("#youtube-player");
+
+  let setWidth = window.getComputedStyle(playerWrapper).width;
+  let setHeight = window.getComputedStyle(playerWrapper).height;
+
+  video.style.width = setWidth;
+  video.style.height = setHeight;
+}

@@ -34,13 +34,12 @@
     cursor: pointer;
 
     @include tablets {
-      width: rem(594px);
-      height: rem(354px);
+      max-width: rem(594px);
+      width: 77%;
     }
 
     @include phones {
       width: rem(394px);
-      height: rem(232px);
     }
   }
 

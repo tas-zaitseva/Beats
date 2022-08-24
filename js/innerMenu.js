@@ -4,7 +4,7 @@ const openMenu = document.querySelector('#hamburgerMenu');
 const body = document.body;
 const templateMenu = document.querySelector('#innerMenu');
 
-openMenu.addEventListener('click', e => {
+openMenu.addEventListener('click', (e) => {
   e.preventDefault;
   const menu = document.createElement('nav');
   menu.classList.add('menu', 'menu--inner');
@@ -25,5 +25,4 @@ openMenu.addEventListener('click', e => {
     e.preventDefault;
     body.removeChild(menu);
   })
-
 })

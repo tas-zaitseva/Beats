@@ -1,3 +1,4 @@
+export default scrollToSection;
 
 
 const sections = document.querySelectorAll('section');
@@ -125,5 +126,4 @@ function styleSideLighter() {
   }
 }
 
-export default scrollToSection;
 

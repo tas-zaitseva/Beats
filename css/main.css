@@ -2528,14 +2528,13 @@ textarea {
 }
 @media screen and (max-width: 768px) {
   .video__wrapper {
-    width: 37.125rem;
-    height: 22.125rem;
+    max-width: 37.125rem;
+    width: 77%;
   }
 }
 @media screen and (max-width: 480px) {
   .video__wrapper {
     width: 24.625rem;
-    height: 14.5rem;
   }
 }
 .video__player {
