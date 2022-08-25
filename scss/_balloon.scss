@@ -1,0 +1,39 @@
+.balloon {
+  font-family:'play', helvetica, sans-serif;
+  font-size: rem(16px);
+  background: $white;
+  // border-radius: 5px;
+  // padding: 20px 10px;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+
+  span {
+    font-weight: 600;
+  }
+
+  @include phones {
+    flex-direction: column;
+    font-size: rem(20px);
+  }
+}
+
+.balloon__icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin-right: 10px;
+
+  @include phones {
+    margin-bottom: 10px;
+  }
+}
+
+.balloon__pic {
+  color: $red;
+}
+
+.balloon__address {
+  margin-bottom: 10px;
+}

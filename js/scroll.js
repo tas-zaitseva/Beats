@@ -1,6 +1,5 @@
 export default scrollToSection;
 
-
 const sections = document.querySelectorAll('section');
 const display = document.querySelector('.main-content');
 

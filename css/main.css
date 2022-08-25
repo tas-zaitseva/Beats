@@ -2708,3 +2708,48 @@ textarea {
 .video--active .video__splash {
   display: none;
 }
+
+.balloon {
+  font-family: "play", helvetica, sans-serif;
+  font-size: 1rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+}
+.balloon span {
+  font-weight: 600;
+}
+@media screen and (max-width: 480px) {
+  .balloon {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1.25rem;
+  }
+}
+
+.balloon__icon {
+  width: 40px;
+  height: 40px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 10px;
+}
+@media screen and (max-width: 480px) {
+  .balloon__icon {
+    margin-bottom: 10px;
+  }
+}
+
+.balloon__pic {
+  color: #E01F3D;
+}
+
+.balloon__address {
+  margin-bottom: 10px;
+}
