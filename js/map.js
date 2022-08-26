@@ -1,12 +1,23 @@
 ymaps.ready(init);
 
 function init() {
-  let map = new ymaps.Map('map', {
-    center: [55.75010657, 37.59873423],
-    zoom: 14,
-    controls: ['zoomControl'],
-    behaviors: ['drag'] 
-  });
+  let map;
+
+  if (isMobile) {
+    map = new ymaps.Map('map', {
+      center: [55.75010657, 37.59873423],
+      zoom: 13,
+      controls: ['zoomControl'],
+      behaviors: ['drag'] 
+    });
+  } else {
+    map = new ymaps.Map('map', {
+      center: [55.75010657, 37.59873423],
+      zoom: 14,
+      controls: ['zoomControl'],
+      behaviors: ['drag'] 
+    });
+  }
 
   // let coords = [
   //   [55.7589644348603,37.58109490130086],
@@ -19,23 +30,23 @@ function init() {
   let placemarks = [
     {
       coords: [55.7589644348603,37.58109490130086],
-      adress: 'Кудринская площадь, 1'
+      address: 'Кудринская площадь, 1'
     },
     {
       coords: [55.74940456899021,37.60237299999997],
-      adress: 'ул. Знаменка, 19с3'
+      address: 'ул. Знаменка, 19с3'
     },
     {
       coords: [55.74298506900349,37.58114549999996],
-      adress: 'Ружейный переулок, 3'
+      address: 'Ружейный переулок, 3'
     },
     {
       coords: [55.757131068980215,37.61711450000001],
-      adress: 'ул. Охотный ряд, 2'
+      address: 'ул. Охотный ряд, 2'
     },
   ];
 
-  function setPlacemark(coord, adress) {
+  function setPlacemark(coord, address, width, height) {
     let placemark = new ymaps.Placemark(coord,
       {
         balloonContent: `<div class="contacts__balloon balloon">
@@ -46,7 +57,7 @@ function init() {
                           </div>
                           <div class="balloon__row">
                             <div class="balloon__description"><span>Beats.</span> Адрес магазина:</div>
-                            <div class="balloon__address">${adress}</div>
+                            <div class="balloon__address">${address}</div>
                             <div class="baloon__workhours">
                               <div class="baloon__workhours-title"><span>Режим работы:</span></div>  
                               <div class="baloon__workhours-hours">пн-вс: 10.00 - 19.00</div>  
@@ -57,16 +68,22 @@ function init() {
       {
         iconLayout: 'default#image',
         iconImageHref: './svg/placemark.svg',
-        iconImageSize: [58, 73],
-        iconImageOffset: [-29, -73],
+        iconImageSize: [width, height],
+        iconImageOffset: [-(width/2), -(height)],
         draggable: false
       }
     )
     return placemark;
   }
-
-  for (let i=0; i<placemarks.length; i++) {
-    geoObjects.push(setPlacemark(placemarks[i].coords, placemarks[i].adress));
+  
+  if (isMobile) {
+    for (let i=0; i<placemarks.length; i++) {
+      geoObjects.push(setPlacemark(placemarks[i].coords, placemarks[i].address, 43, 55));
+    }
+  } else {
+    for (let i=0; i<placemarks.length; i++) {
+      geoObjects.push(setPlacemark(placemarks[i].coords, placemarks[i].address, 58, 73));
+    }
   }
 
   let clusterer = new ymaps.Clusterer({

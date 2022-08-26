@@ -109,8 +109,8 @@ function onPlayerReady() {
   player.setVolume(100);
 
   window.addEventListener('resize', ()=> {
-    resizeVideo();
     setVideoHeight();
+    resizeVideo(player.i);
   });
 }
 
@@ -140,8 +140,8 @@ function onPlayerStateChange(event) {
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('youtube-player', {
-    width: `${playerWrapper.clientWidth}`,
-    height: `${playerWrapper.clientHeight}`,
+    width: `${playerWrapper.clientWidth}px`,
+    height: `${playerWrapper.clientHeight}px`,
     videoId: '1_f3RcyYdfA',
     events: {
       'onReady': onPlayerReady,
@@ -165,9 +165,7 @@ function setVideoHeight() {
   playerWrapper.style.height = `${videoHeight}px`;
 }
 
-function resizeVideo() {
-  const video = document.querySelector("#youtube-player");
-
+function resizeVideo(video) {
   let setWidth = window.getComputedStyle(playerWrapper).width;
   let setHeight = window.getComputedStyle(playerWrapper).height;
 

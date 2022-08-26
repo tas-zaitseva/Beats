@@ -1,14 +1,5 @@
 let feedback = $('.single-feedback');
 let avatars = $('#interactive-avatars');
-// let avatar = $('.interactive-avatar__link');
-
-// $(avatar).each(function(ndx, item) {
-//   $(this).on('click', function(event) {
-//     event.preventDefault();
-//     $(feedback).eq(ndx).addClass('single-feedback--active').siblings().removeClass('single-feedback--active');
-//     $(avatar).eq(ndx).closest('.interactive-avatar').addClass('interactive-avatar--active').siblings().removeClass('interactive-avatar--active');
-//   })
-// })
 
 //сделала с помощью делегирования
 
