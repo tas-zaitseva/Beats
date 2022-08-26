@@ -1,96 +1,55 @@
-// const colorsButton = $('.colors-menu__button');
-// const colorsItem = $('.colors-menu__item');
-// const colorsContent = $('.colors-menu__content');
+const menu = document.querySelector('#horizontalMenu');
+const items = document.querySelectorAll('.colors-menu__item');
+const colorsButtons = document.querySelectorAll('.colors-menu__button');
 
-// colorsButton.on('click', function(event) {
-//   event.preventDefault();
-
-// // //это с помощью навешивания классов
-// //   if ($(this).parent().hasClass('colors-menu__item--active')) {
-// //     $(this).parent().removeClass('colors-menu__item--active');
-// //   } else {
-// //     colorsItem.removeClass('colors-menu__item--active');
-// //     $(this).parent().addClass('colors-menu__item--active');
-// //   }
-
-// //это с помощью предварительно заданной ширины в css
-//   const targetWidth = $(this).next().find('.colors-menu__text').outerWidth();
-  
-//   if ($(this).next().outerWidth() !== 0) {
-//     $(this).next().outerWidth(0);
-//   } else {
-//     colorsContent.outerWidth(0);
-//     $(this).next().outerWidth(targetWidth);    
-//   }
-
-// })
-
-// const menu = $('#horizontalMenu'); //при делегировании метод target иногда попадает на заголовок внутри кнопки и в этом случае надо весь код переписывать
-const colorsButton = $('.colors-menu__button')
-const items = $('.colors-menu__item');
-
-const getItemWidth = function(item) {
-  let getResultWidth = 524; //по умолчанию берем значение для десктопов
+function getItemInnerWidth(item) {
+  let getResultWidth = 524; //379
 
   const windowWidth = window.innerWidth;
-  const itemWidth = $(item).outerWidth(); //или в ванильном js: item.offsetWidth
+  const itemWidth = item.offsetWidth;
 
-  const isTablet = window.matchMedia("(max-width: 768px)").matches;
-  const isMobile = window.matchMedia("(max-width: 480px)").matches;
+  const isTablet = window.matchMedia('(max-width: 768px)').matches; //true or false
+  const isMobile = window.matchMedia('(max-width: 480px)').matches; //true or false
 
   if (isTablet) {
-    getResultWidth = windowWidth - itemWidth * (items).length;
-  }
+    getResultWidth = windowWidth - itemWidth * items.length;
+  } 
   if (isMobile) {
     getResultWidth = windowWidth - itemWidth;
   }
   return getResultWidth;
 }
 
-const setItemWidth = function(item, width) {
-  const itemContent = $(item).next();
-  const itemText = $(item).next().children();
+function setWidth(targetElement) {
+  let innerContent = targetElement.nextElementSibling;
+  if (targetElement.classList.contains('active')) {
+    targetElement.parentNode.classList.remove('colors-menu__item--active');
+    targetElement.classList.remove('active');
+    innerContent.style.width = 0;
+    
+  } else {
+    items.forEach(item => {item.classList.remove('colors-menu__item--active')});
+    targetElement.parentNode.classList.add('colors-menu__item--active');
+    
+    colorsButtons.forEach(button => {
+      button.classList.remove('active');
+      button.nextElementSibling.style.width = 0;
+    });
 
-  itemContent.outerWidth(width);
+    targetElement.classList.add('active');
+    innerContent.firstElementChild.style.width = `${getItemInnerWidth(targetElement)}px`;
+    innerContent.style.width = `${getItemInnerWidth(targetElement)}px`;
+    
+  }
 }
 
-const openItem = function(item) {
-  const itemContent = $(item).next();
-  const itemText = $(item).next().children();
-  const itemParent = $(item).parent();
-
-  const width = getItemWidth(item);
-  itemText.outerWidth(width);
-  itemContent.outerWidth(width);
-  $(item).addClass('colors-menu__button--active');
-  $(itemParent).addClass('colors-menu__item--active');
-}
-
-const closeItem = function(item) {
-  const itemParent = $(item).parent();
-  setItemWidth(item, 0);
-  $(item).removeClass('colors-menu__button--active');
-  $(itemParent).removeClass('colors-menu__item--active');
-}
-
-colorsButton.on('click', function(event) {
+menu.addEventListener('click', function(event) {
   event.preventDefault();
-  // const target = event.target;
-  const isActive = $(this).hasClass('colors-menu__button--active');
-  const activeElement = $('.colors-menu__button--active');
+  let target = event.target;
 
-  if ($(this).hasClass('colors-menu__button') && isActive) {
-    closeItem(this);
-  } if ($(this).hasClass('colors-menu__button') && !isActive) {
-    closeItem(activeElement);
-    openItem(this);
+  if (target.classList.contains('colors-menu__button')) {
+    setWidth(target);
+  } else if (target.classList.contains('colors-menu__title')) {
+    setWidth(target.parentNode);
   }
 })
-
-$(window).resize(function() {
-  const activeButton = $('.colors-menu__button--active');
-  if (activeButton) {
-    closeItem(activeButton);
-  }
-})
-
