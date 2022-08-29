@@ -1,22 +1,44 @@
-$('.team-member__button').on('click', function() {
+let buttons = document.querySelectorAll('.team-member__button');
+let descriptions = document.querySelectorAll('.team-member__description');
+let openers = document.querySelectorAll('.opener');
 
-  if ($(this).next().height() !== 0) {
-    $(this).next().height(0);
-  } else {
-    $('.team-member__description').height(0);
-    let reqHeight = $(this).next().find('.team-member__inner-content').height();
-    $(this).next().height(reqHeight);
+function removeOpenerClass() {
+  for (let opener of openers) {
+    opener.classList.remove('opener--active');
   }
+}
 
-  if ($(this).find('.opener').hasClass('opener--active')) {
-    $(this).find('.opener').removeClass('opener--active');
-  } else {
-    $('.opener').removeClass('opener--active');
-    $(this).find('.opener').addClass('opener--active');
+function nullDescriptionHeight() {
+  for (let description of descriptions) {
+    description.style.height = 0;
   }
-})
+}
 
-$(window).resize(function() {
-  $('.team-member__description').height(0);
-  $('.opener').removeClass('opener--active');
+for (let button of buttons) {
+  let description = button.nextElementSibling;
+  let innerContent = description.querySelector('.team-member__inner-content');
+  let opener = button.querySelector('.opener');
+
+
+  button.addEventListener('click', function() {
+    if (description.offsetHeight === 0) {
+      nullDescriptionHeight();
+      let reqHeight = innerContent.offsetHeight;
+      description.style.height = `${reqHeight}px`;
+    } else {
+      description.style.height = 0;
+    }
+
+    if (opener.classList.contains('opener--active')) {
+      opener.classList.remove('opener--active');
+      removeOpenerClass();
+    } else {
+      opener.classList.add('opener--active');
+    }
+  })
+}
+
+window.addEventListener('resize', ()=> {
+  nullDescriptionHeight();
+  removeOpenerClass();
 })

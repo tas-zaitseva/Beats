@@ -38,25 +38,60 @@ const isMobile = mobileDetect.mobile();
 
 if (isMobile) {
   //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
-  $(function() {
-    $("body").swipe( {
-      swipe:function(event, direction) {
-        const activeSection = document.querySelector('.active-section');
-        if (direction === 'up' && activeSection.nextElementSibling) {
-          const dataLink = activeSection.nextElementSibling.dataset.open;
-          scrollToSection(dataLink);
-        } else if (direction === 'down' && activeSection.previousElementSibling) {
-          const dataLink = activeSection.previousElementSibling.dataset.open;
-          scrollToSection(dataLink);
-        }
-      }
-    });
-  });
+  // $(function() {
+  //   $("body").swipe( {
+  //     swipe:function(event, direction) {
+  //       const activeSection = document.querySelector('.active-section');
+  //       if (direction === 'up' && activeSection.nextElementSibling) {
+  //         const dataLink = activeSection.nextElementSibling.dataset.open;
+  //         scrollToSection(dataLink);
+  //       } else if (direction === 'down' && activeSection.previousElementSibling) {
+  //         const dataLink = activeSection.previousElementSibling.dataset.open;
+  //         scrollToSection(dataLink);
+  //       }
+  //     }
+  //   });
+  // });
+
+  let startX, startY;
+  let activeSection;
 
   const wrapper = document.querySelector('.wrapper');
-  wrapper.addEventListener('touchmove', (event) => {
+  wrapper.addEventListener('touchstart', handleTouchStart);
+  wrapper.addEventListener('touchmove', handleTouchMove);
+  wrapper.addEventListener('touchend', handleTouchEnd);
+
+  function handleTouchStart(event) {
     event.preventDefault();
-  })
+    activeSection = document.querySelector('.active-section');
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+  }
+  
+  function handleTouchMove(event) {
+    event.preventDefault();
+    let endX = event.touches[0].clientX;
+    let endY = event.touches[0].clientY;
+
+    let xDiff = endX - startX;
+    let yDiff = endY - startY;
+
+    if (Math.abs(xDiff) < Math.abs(yDiff)) {
+      if (yDiff < 0 && activeSection.nextElementSibling) {
+        const dataLink = activeSection.nextElementSibling.dataset.open;
+        scrollToSection(dataLink);
+      } else if (yDiff > 0 && activeSection.previousElementSibling) {
+        const dataLink = activeSection.previousElementSibling.dataset.open;
+        scrollToSection(dataLink);
+      }
+    } 
+  }
+
+  function handleTouchEnd(event) {
+    event.preventDefault();
+    startX = null;
+    startY = null;
+  }
 }
 
 window.addEventListener('keydown', function(event) {

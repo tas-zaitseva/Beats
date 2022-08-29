@@ -1,22 +1,27 @@
-let feedback = $('.single-feedback');
-let avatars = $('#interactive-avatars');
+let feedback = document.querySelectorAll('.single-feedback');
+let avatars = document.querySelectorAll('.interactive-avatar');
+let switcher = document.querySelector('#interactive-avatars');
 
-//сделала с помощью делегирования
-
-$(avatars).on('click', event =>{
+switcher.addEventListener('click', event =>{
   event.preventDefault();
   const target = event.target;
 
-  if ($(target).hasClass('interactive-avatar__pic')) {
-    $(target).closest('.interactive-avatar').addClass('interactive-avatar--active').siblings().removeClass('interactive-avatar--active')
-    let id = $(target).closest('.interactive-avatar').attr('data-open');
+  if (target.classList.contains('interactive-avatar__pic')) {
+
     
-    $(feedback).each(function(item) {
-      if($(this).attr('data-item') == id) {
-        $(this).addClass('single-feedback--active').siblings().removeClass('single-feedback--active');
+    let avatar = target.parentNode.parentNode;
+    let id = avatar.getAttribute('data-open');
+    
+    for (let avatar of avatars) {
+      avatar.classList.remove('interactive-avatar--active');
+    }
+    avatar.classList.add('interactive-avatar--active');
+    
+    feedback.forEach(oneFeedback => {
+      oneFeedback.classList.remove('single-feedback--active');
+      if (oneFeedback.getAttribute('data-item') === id) {
+        oneFeedback.classList.add('single-feedback--active');
       }
     })
   }
-
-
 })
