@@ -53,7 +53,7 @@ if (isMobile) {
   //   });
   // });
 
-  let startX, startY;
+  let startX = null, startY = null;
   let activeSection;
 
   const wrapper = document.querySelector('.wrapper');
