@@ -72,7 +72,7 @@ if (isMobile) {
     if (!startX || !startY) {
       return;
     }
-    // event.preventDefault();
+    event.preventDefault();
     let endX = event.touches[0].clientX;
     let endY = event.touches[0].clientY;
 
