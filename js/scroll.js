@@ -62,14 +62,17 @@ if (isMobile) {
   wrapper.addEventListener('touchend', handleTouchEnd);
 
   function handleTouchStart(event) {
-    event.preventDefault();
+    // event.preventDefault();
     activeSection = document.querySelector('.active-section');
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
   }
   
   function handleTouchMove(event) {
-    event.preventDefault();
+    if (!startX || !startY) {
+      return;
+    }
+    // event.preventDefault();
     let endX = event.touches[0].clientX;
     let endY = event.touches[0].clientY;
 
@@ -88,7 +91,7 @@ if (isMobile) {
   }
 
   function handleTouchEnd(event) {
-    event.preventDefault();
+    // event.preventDefault();
     startX = null;
     startY = null;
   }
