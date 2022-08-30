@@ -97,7 +97,7 @@
   </symbol>
 
   <symbol id="arrow" viewBox="0 0 15 29" preserveAspectRatio="xMidYMid">
-    <path fill="transparent" d="M14 28L1.91422 15.9142C1.13317 15.1332 1.13317 13.8668 1.91421 13.0858L14 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    <path fill="transparent" d="M14 28L1.91422 15.9142C1.13317 15.1332 1.13317 13.8668 1.91421 13.0858L14 1" stroke-width="2" stroke-linecap="round"/>
   </symbol>
 
   <symbol id="gear" viewBox="0 0 42 42" preserveAspectRatio="xMidYMid">

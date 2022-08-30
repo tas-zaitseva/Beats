@@ -56,21 +56,24 @@ if (isMobile) {
   let startX = null, startY = null;
   let activeSection;
 
-  const wrapper = document.querySelector('.wrapper');
+  const wrapper = document.querySelector('.wrapper');  
   wrapper.addEventListener('touchstart', handleTouchStart);
   wrapper.addEventListener('touchmove', handleTouchMove);
   wrapper.addEventListener('touchend', handleTouchEnd);
 
   function handleTouchStart(event) {
-    activeSection = document.querySelector('.active-section');
-    startX = event.touches[0].clientX;
-    startY = event.touches[0].clientY;
+    if (!event.target.classList.contains('ymaps-2-1-79-events-pane')) {
+      activeSection = document.querySelector('.active-section');
+      startX = event.touches[0].clientX;
+      startY = event.touches[0].clientY;
+    }
   }
   
   function handleTouchMove(event) {
-    // if (!startX || !startY) {
-    //   return;
-    // }
+    if (!startX || !startY) {
+      return;
+    }
+
     event.preventDefault();
     let endX = event.touches[0].clientX;
     let endY = event.touches[0].clientY;

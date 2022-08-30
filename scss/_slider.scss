@@ -1,7 +1,13 @@
 .slider {
   position: relative;
-  width: $container-width;
-  max-width: $container-max-width;
+  display: flex;
+  justify-content: center;
+  width: 95%;
+
+  &__display {
+    overflow: hidden;
+    width: 95%;
+  }
   
   &__arrow {
     position: absolute;
@@ -9,6 +15,7 @@
     width: 14px;
     height: 27px;
     z-index: 100;
+    stroke: #000;
 
     @include tablets {
       top: rem($product-img-width/2);
@@ -34,11 +41,19 @@
       }
     }
   }
+
+  &__arrow.unactive {
+    cursor: auto;
+
+    .slider__arrow-pic {
+      stroke: $gray;
+    }
+  }
 }
 
-.bx-wrapper {
-  box-shadow: none;
-  border: none;
-  background: transparent;
-}
+// .bx-wrapper {
+//   box-shadow: none;
+//   border: none;
+//   background: transparent;
+// }
 

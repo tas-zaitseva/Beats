@@ -19,6 +19,14 @@
     display: flex;
     justify-content: center;
   }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    right: 0;
+    transition: right, .6s;
+  }
 }
 
 .product {
@@ -33,7 +41,6 @@
   &__img {
     margin-top: rem(30px);
     width: 0.5 * $container-width;
-    margin-left: rem(32px);
     margin-right: rem(10px);
 
     @include tablets {
