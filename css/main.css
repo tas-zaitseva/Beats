@@ -1766,8 +1766,8 @@ textarea {
   grid-template-columns: repeat(2, 1fr);
   position: relative;
   right: 0;
-  -webkit-transition: right, 0.6s;
-  transition: right, 0.6s;
+  -webkit-transition: right, 0.5s;
+  transition: right, 0.5s;
 }
 
 .product {

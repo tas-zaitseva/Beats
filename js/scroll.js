@@ -70,9 +70,9 @@ if (isMobile) {
   }
   
   function handleTouchMove(event) {
-    if (!startX || !startY) {
-      return;
-    }
+    // if (!startX || !startY) {
+    //   return;
+    // }
 
     event.preventDefault();
     let endX = event.touches[0].clientX;
