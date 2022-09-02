@@ -2350,6 +2350,7 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   padding: 2.3125rem 3.4375rem;
+  border-radius: 2px;
   text-align: center;
 }
 .modal__content {

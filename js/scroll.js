@@ -37,22 +37,6 @@ const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
 
 if (isMobile) {
-  //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
-  // $(function() {
-  //   $("body").swipe( {
-  //     swipe:function(event, direction) {
-  //       const activeSection = document.querySelector('.active-section');
-  //       if (direction === 'up' && activeSection.nextElementSibling) {
-  //         const dataLink = activeSection.nextElementSibling.dataset.open;
-  //         scrollToSection(dataLink);
-  //       } else if (direction === 'down' && activeSection.previousElementSibling) {
-  //         const dataLink = activeSection.previousElementSibling.dataset.open;
-  //         scrollToSection(dataLink);
-  //       }
-  //     }
-  //   });
-  // });
-
   let startX = null, startY = null;
   let activeSection;
 
@@ -70,9 +54,9 @@ if (isMobile) {
   }
   
   function handleTouchMove(event) {
-    // if (!startX || !startY) {
-    //   return;
-    // }
+    if (!startX || !startY) {
+      return;
+    }
 
     event.preventDefault();
     let endX = event.touches[0].clientX;
