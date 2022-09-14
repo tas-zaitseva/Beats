@@ -8,14 +8,7 @@
     column-gap: rem(9px);
   }
 
-  &__item {
-    width: rem(74px);
-    height: rem(74px);
-    cursor: pointer;
-
-    @include phones {
-      width: rem(64px);
-      height: rem(64px);
-    }
+  @include phonesLandscape {
+    column-gap: rem(9px);
   }
 }

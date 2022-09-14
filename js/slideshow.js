@@ -6,10 +6,9 @@ switcher.addEventListener('click', event =>{
   event.preventDefault();
   const target = event.target;
 
-  if (target.classList.contains('interactive-avatar__pic')) {
+  if (target.classList.contains('interactive-avatar__link')) {
 
-    
-    let avatar = target.parentNode.parentNode;
+    let avatar = target.parentNode;
     let id = avatar.getAttribute('data-open');
     
     for (let avatar of avatars) {

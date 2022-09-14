@@ -2,15 +2,46 @@
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
+  position: relative;
+  width: rem(74px);
+  height: rem(74px);
+  cursor: pointer;
+
+  @include phones {
+    width: rem(64px);
+    height: rem(64px);
+  }
+
+  @include phonesLandscape {
+    width: rem(64px);
+    height: rem(64px);
+  }
 
   &__link {
+    display: block;
     width: 100%;
     height: 100%;
     border-radius: 50%;
+
+    &::after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      border-radius: 50%;
+      top:0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border: 4px solid transparent;
+    }
   }
 
   &--active {
-    outline: 4px solid $red;
-    outline-offset: -4px;
+    .interactive-avatar__link::after {
+      border: 4px solid $red;
+    }
   } 
 }
