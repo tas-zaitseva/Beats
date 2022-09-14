@@ -42,6 +42,11 @@
   
   .menu__list {
     flex-direction: column;
+
+    @include phonesLandscape {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
   
   .menu__link {

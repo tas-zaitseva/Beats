@@ -18,6 +18,11 @@
     padding: rem(21px) rem(41px);
   }
 
+  @include phonesLandscape {
+    font-size: rem(16px);
+    padding: rem(21px) rem(41px);
+  }
+
   @media screen and (min-width: 769px) {
     &:hover {
       background-color: $dark-red;

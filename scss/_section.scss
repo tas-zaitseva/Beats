@@ -32,6 +32,11 @@
     width: 95%;
     font-size: rem(32px);
   }
+
+  @include phonesLandscape {
+    width: 95%;
+    font-size: rem(32px);
+  }
 }
 
 .section-description {
@@ -42,8 +47,8 @@
   @include phones {
     width: 85%;
   }
-}
 
-// .active-section {
-//   font-size: 100px;
-// }
+  @include phonesLandscape {
+    width: 85%;
+  }
+}

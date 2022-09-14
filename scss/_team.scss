@@ -25,6 +25,12 @@
   @include phones {
     row-gap: rem(7px);
   }
+
+  @include phonesLandscape {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
 .team-member {
@@ -51,6 +57,11 @@
     margin-right: 0;
   }
 
+  @include phonesLandscape {
+    max-width: 24%;
+    margin-right: 0;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -70,6 +81,13 @@
       display: none;
     }
 
+    @include phonesLandscape {
+      display: block;
+      width: rem(138px);
+      height: rem(180px);
+      margin-bottom: rem(15px);
+    }
+
     &-hidden {
       display: none;
       
@@ -82,8 +100,11 @@
         width: rem(138px);
         height: rem(180px);
       }
-    }
 
+      @include phonesLandscape {
+        display: none;
+      }
+    }
   }
 
   &__button {
@@ -111,7 +132,11 @@
     @include tablets {
       font-weight: bold;
       font-size: rem(18px);
-      margin-bottom: 10px;
+      margin-bottom: rem(10px);
+    }
+
+    @include phonesLandscape {
+      margin-bottom: rem(5px);
     }
   }
 
@@ -146,5 +171,9 @@
 
   @include phones {
     margin-top: rem(11px);
+  }
+
+  @include phonesLandscape {
+    margin-top: rem(5px);
   }
 }

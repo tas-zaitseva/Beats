@@ -14,6 +14,13 @@ function validateFields(someForm, fieldsArray) {
   return errorFields.length === 0;
 }
 
+form.addEventListener('reset', function() {
+  let fieldsArray = form.elements;
+  for (field of fieldsArray) {
+    field.classList.remove('input-error');
+  }
+})
+
 form.addEventListener('submit', function(event) {
   event.preventDefault();
   

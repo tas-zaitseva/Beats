@@ -12,6 +12,10 @@
     @include phones {
       margin-bottom: rem(30px);
     }
+
+    @include phonesLandscape {
+      margin-bottom: rem(30px);
+    }
   }
 
   &:after {
@@ -43,6 +47,10 @@
     }
 
     @include phones {
+      margin-bottom: rem(50px);
+    }
+
+    @include phonesLandscape {
       margin-bottom: rem(50px);
     }
   }
@@ -77,6 +85,13 @@
     padding: rem(56px) rem(23px) rem(38px);
     margin-bottom: rem(43px);
   }
+
+  @include phonesLandscape {
+    flex-direction: row;
+    padding: rem(30px);
+    margin-bottom: rem(15px);
+    min-height: rem(230px);
+  }
   
   &__avatar {
     width: rem(253px);
@@ -101,6 +116,11 @@
 
     @include phones {
       padding-top: rem(22px);
+    }
+
+    @include phonesLandscape {
+      padding-top: 0;
+      align-items: flex-start;
     }
   }
 
@@ -132,6 +152,12 @@
       margin-bottom: rem(14px);
     }
 
+    @include phonesLandscape {
+      line-height: 1.24;
+      margin-bottom: rem(14px);
+      text-align: left;
+    }
+
     p {
       margin-bottom: rem(10px);
 
@@ -159,6 +185,10 @@
     transform: translate(-50%, -70%);
 
     @include phones {
+      display: none;
+    }
+
+    @include phonesLandscape{
       display: none;
     }
   }

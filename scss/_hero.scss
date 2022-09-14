@@ -3,15 +3,23 @@
   padding-bottom: rem(63px);
   position: relative;
   
+  @include phonesLandscape {
+    padding-bottom: rem(10px);
+  }
+  
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     background: url(../images/headline-pic.png) right rem(15px) center / 53% auto no-repeat;
-
+    
     @include tablets {
       background: none;
+    }
+    
+    @include phonesLandscape {
+      background: url(../images/headline-pic.png) right rem(15px) center / 40% auto no-repeat;
     }
   }
 
@@ -44,6 +52,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: rem(64px);
+    position: relative;
 
     @include tablets {
       width: 100%;
@@ -69,6 +78,16 @@
         height: 67vw;
       }
     }
+
+    @include phonesLandscape {
+      width: 50%;
+      align-items: flex-start;
+      text-align: left;
+
+      &:before {
+        display: none;
+      }
+    }
   }
   
   &__title {
@@ -85,8 +104,17 @@
       font-size: rem(32px);
       margin-top: rem(56px);
       margin-bottom: rem(16px);
-      max-width: 303px;
+      max-width: rem(303px);
       width: auto;
+    }
+
+    @include phonesLandscape {
+      font-size: rem(32px);
+      margin-top: 0;
+      margin-bottom: rem(16px);
+      max-width: rem(311px);
+      width: auto;
+
     }
   }
 
@@ -111,10 +139,23 @@
       margin-bottom: rem(24px);
       font-size: rem(18px);
     }
+
+    @include phonesLandscape {
+      font-family: 'Play', helvetica, sans-serif;
+      width: auto;
+      max-width: 341px;
+      margin-bottom: rem(24px);
+      font-size: rem(18px);
+    }
   }
 
   &__button, .button{
     @include phones {
+      font-size: rem(19px);
+      padding: rem(21px) rem(37px);
+    }
+
+    @include phonesLandscape {
       font-size: rem(19px);
       padding: rem(21px) rem(37px);
     }

@@ -38,6 +38,13 @@
     align-items: center;
   }
 
+  @include phonesLandscape {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: rem(20px);
+  }
+
   &__img {
     margin-top: rem(30px);
     width: 0.5 * $container-width;
@@ -51,6 +58,11 @@
 
     @include phones {
       margin-bottom: rem(20px);
+    }
+
+    @include phonesLandscape {
+      margin-bottom: 0;
+      width: 44%;
     }
   }
 
@@ -73,6 +85,11 @@
     @include phones {
       max-width: 90%;
     }
+
+    @include phonesLandscape {
+      max-width: 55%;
+      align-items: flex-start;
+    }
   }
 
   &__dropdown {
@@ -94,6 +111,11 @@
     @include phones {
       margin-bottom: rem(12px);
     }
+
+    @include phonesLandscape {
+      margin-bottom: rem(12px);
+      text-align: left;
+    }
   }
   
   &__description {
@@ -106,6 +128,10 @@
     @include tablets {
       max-width: 100%;
       text-align: center;
+    }
+
+    @include phonesLandscape {
+      text-align: left;
     }
   }
 
@@ -120,7 +146,7 @@
       margin-right: rem(8px);
     }
     
-    @include tablets {
+    @include phones {
       margin-bottom: rem(20px);
       margin-right: rem(8px);
     }
@@ -147,6 +173,10 @@
     @include phones {
       column-gap: rem(23px);      
     }
+
+    @include phonesLandscape {
+      column-gap: rem(10px);      
+    }
   }
 
   &__price {
@@ -158,6 +188,11 @@
 
     @include phones {
       font-size: rem(32px);
+    }
+
+    @include phonesLandscape {
+      font-size: rem(32px);
+      flex-shrink: 0;
     }
   }
 }

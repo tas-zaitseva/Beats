@@ -24,15 +24,16 @@ for (let button of buttons) {
     if (description.offsetHeight === 0) {
       nullDescriptionHeight();
       let reqHeight = innerContent.offsetHeight;
+      console.log(reqHeight);
       description.style.height = `${reqHeight}px`;
     } else {
       description.style.height = 0;
     }
 
     if (opener.classList.contains('opener--active')) {
-      opener.classList.remove('opener--active');
       removeOpenerClass();
     } else {
+      removeOpenerClass();
       opener.classList.add('opener--active');
     }
   })

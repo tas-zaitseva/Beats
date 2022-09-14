@@ -112,6 +112,11 @@ function onPlayerReady() {
     setVideoHeight();
     resizeVideo(player.i);
   });
+
+  window.addEventListener("orientationchange", ()=> {
+    setVideoHeight();
+    resizeVideo(player.i);
+  });
 }
 
 function onPlayerStateChange(event) {

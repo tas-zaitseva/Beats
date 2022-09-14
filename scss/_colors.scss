@@ -16,6 +16,11 @@
     background-size: cover;
   }
 
+  @include phonesLandscape {
+    background: url(./../images/colors_bg.png) right center no-repeat;
+    background-size: cover;
+  }
+
   &__headline {
     padding-top: rem(115px);
     padding-left: rem(84px);

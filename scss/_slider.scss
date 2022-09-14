@@ -21,6 +21,10 @@
       top: rem($product-img-width/2);
     }
 
+    @include phonesLandscape {
+      top: 50%;
+    }
+
     &--direction-prev {
       left: -10px;
       transform: translateY(-50%);
@@ -28,6 +32,11 @@
       @include tablets {
         left: 50%;
         transform: translateX(rem(-($product-img-width/2 + 53px))) translateY(-50%);
+      }
+
+      @include phonesLandscape {
+        left: -10px;
+        transform: translateY(-50%);
       }
     }
     
@@ -38,6 +47,11 @@
       @include tablets {
         right: 50%;
         transform: translateX(rem($product-img-width/2 + 53px)) translateY(-50%) rotate(180deg);
+      }
+
+      @include phonesLandscape {
+        right: -10px;
+        transform: translateY(-50%) rotate(180deg);
       }
     }
   }
@@ -50,10 +64,4 @@
     }
   }
 }
-
-// .bx-wrapper {
-//   box-shadow: none;
-//   border: none;
-//   background: transparent;
-// }
 

@@ -26,6 +26,10 @@
     @include phones {
       width: 100%;
     }
+
+    @include phonesLandscape {
+      width: 90%;
+    }
   }
 
   &__container {

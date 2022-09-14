@@ -13,6 +13,10 @@ html {
   @include phones {
     font-size: 3.33333vmin;
   }
+
+  @include phonesLandscape {
+    font-size: 3.33333vmin;
+  }
 }
 
 body {

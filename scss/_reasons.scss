@@ -26,6 +26,10 @@
     @include phones {
       margin-bottom: rem(48px);
     }
+
+    @include phonesLandscape {
+      margin-bottom: rem(20px);
+    }
   }
 
   &__title {
@@ -147,6 +151,12 @@
       height: 26vw;
       margin-bottom: 0;
     }
+
+    @include phonesLandscape {
+      width: 23vh;
+      height: 23vh;
+      margin-bottom: rem(20px);
+    }
   }
 
   &__icon {
@@ -159,6 +169,11 @@
     }
 
     @include phones {
+      width: 48%;
+      height: 48%;
+    }
+
+    @include phonesLandscape {
       width: 48%;
       height: 48%;
     }
@@ -188,6 +203,10 @@
 
     @include phones {
       margin-bottom: 0;
+    }
+
+    @include phonesLandscape {
+      margin-bottom: rem(10px);
     }
   }
 

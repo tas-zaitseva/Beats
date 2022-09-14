@@ -9,7 +9,13 @@
 }
 
 @mixin phones {
-  @media screen and (max-width: $phones) {
+  @media screen and (max-width: $phones) and (orientation: portrait){
+    @content;
+  }
+}
+
+@mixin phonesLandscape {
+  @media screen and (max-height: 540px) and (orientation: landscape){
     @content;
   }
 }

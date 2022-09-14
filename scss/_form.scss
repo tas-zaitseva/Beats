@@ -7,16 +7,22 @@ column-gap: rem(26px);
   row-gap: rem(17px);
 }
 
-  &__column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    row-gap: rem(8px);
+@include phonesLandscape {
+  min-height: rem(170px);
+  flex-direction: row;
+}
 
-    @include tablets {
-      row-gap: rem(10px);
-    }
+
+&__column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(8px);
+
+  @include tablets {
+    row-gap: rem(10px);
   }
+}
 
   &__row {
     display: flex;
@@ -25,6 +31,25 @@ column-gap: rem(26px);
 
     @include tablets {
       column-gap: rem(18px);
+    }
+
+    @include phonesLandscape {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: rem(13px);
+      flex-shrink: 0;
+    }
+  }
+
+  &__row[data-name=building] {
+    @include phonesLandscape {
+      display: none;
+    }
+  }
+
+  &__row[data-name=street] {
+    @include phonesLandscape {
+      display: none;
     }
   }
 
@@ -37,6 +62,10 @@ column-gap: rem(26px);
 
     @include tablets {
       row-gap: rem(4px);
+    }
+
+    @include phonesLandscape {
+      width: 100%;
     }
   }
 
@@ -76,6 +105,10 @@ column-gap: rem(26px);
       @include phones {
         margin-bottom: rem(12px);
       }
+
+      @include phonesLandscape {
+        margin-bottom: rem(5px);
+      }
     }
   }
 
@@ -91,6 +124,11 @@ column-gap: rem(26px);
       margin-top: rem(14px);
       margin-bottom: rem(28px);
     }
+
+    @include phonesLandscape {
+      margin-top: 0;
+      margin-bottom: rem(5px);
+    }
   }
 
   &__controls {
@@ -100,6 +138,11 @@ column-gap: rem(26px);
   &__buttons {
     @include tablets {
       justify-content: center;
+    }
+
+    @include phonesLandscape {
+      flex-direction: row;
+      justify-content: flex-start;
     }
   }
 }
